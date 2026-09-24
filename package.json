@@ -1,12 +1,17 @@
 {
   "name": "rtb-directory-dashboard",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "Response to Brief Directory dashboard, Jungle Creations",
   "scripts": {
-    "start": "serve -s . -l ${PORT:-3000}"
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "dependencies": {
-    "serve": "^14.2.3"
+    "cookie-session": "^2.1.0",
+    "express": "^4.21.2",
+    "google-auth-library": "^9.15.0"
   }
 }

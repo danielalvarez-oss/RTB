@@ -49,16 +49,34 @@ public `*.up.railway.app` URL. To connect a GitHub repo for auto-deploys on
 every push instead of `railway up`, use the Railway dashboard: New Project >
 Deploy from GitHub repo > pick `rtb-directory-dashboard`.
 
+## Sign-in
+
+The dashboard sits behind Google sign-in (`server.js`). Only verified
+`@junglecreations.com` Google accounts get in; everyone else is sent back to the
+login page. Sessions last 30 days; `/logout` signs out.
+
+Railway service variables:
+
+| Variable | What it is |
+| --- | --- |
+| `GOOGLE_CLIENT_ID` | OAuth client ID from Google Cloud (Web application) |
+| `GOOGLE_CLIENT_SECRET` | That client's secret |
+| `SESSION_SECRET` | Long random string used to sign the login cookie |
+| `BASE_URL` | Public URL, e.g. `https://rtb-directory-dashboard-production.up.railway.app` |
+| `ALLOWED_DOMAIN` | Optional, defaults to `junglecreations.com` |
+
+The Google client's authorised redirect URI must be `<BASE_URL>/auth/google/callback`.
+If any of the first three are missing, the server stays locked rather than
+serving the dashboard.
+
 ## Updating the dashboard later
 
-Come back to this chat, ask for the change, and I'll regenerate `index.html`.
-Drop the new file in over this one, then:
+Replace `private/index.html` with the new version, then:
 
 ```bash
-git add index.html
+git add private/index.html
 git commit -m "Update dashboard"
 git push
 ```
 
-Railway will redeploy automatically if it's connected to the GitHub repo, or
-run `railway up` again if you deployed straight from your machine.
+Railway redeploys automatically from the `main` branch of the GitHub repo.
