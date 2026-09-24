@@ -1,6 +1,6 @@
 {
   "name": "rtb-directory-dashboard",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "description": "Response to Brief Directory dashboard, Jungle Creations",
   "scripts": {
@@ -12,6 +12,6 @@
   "dependencies": {
     "cookie-session": "^2.1.0",
     "express": "^4.21.2",
-    "google-auth-library": "^9.15.0"
+    "pg": "^8.13.1"
   }
 }

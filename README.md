@@ -51,23 +51,37 @@ Deploy from GitHub repo > pick `rtb-directory-dashboard`.
 
 ## Sign-in
 
-The dashboard sits behind Google sign-in (`server.js`). Only verified
-`@junglecreations.com` Google accounts get in; everyone else is sent back to the
-login page. Sessions last 30 days; `/logout` signs out.
+The dashboard is invite-only (`server.js`, `db.js`). Only `@junglecreations.com`
+addresses can be invited.
+
+- **Admins** open **Manage access** (bottom-right of the dashboard, or `/admin`) to
+  create invite links, send password-reset links, cancel unused links and remove people.
+- **Invite links** work once and expire after 7 days. The admin sends each one
+  themselves (Slack or email), which is what proves the person owns the address.
+- **Removing someone** or resetting their password signs them out straight away.
+- Sessions last 30 days; `/logout` signs out. Eight wrong passwords locks that
+  email/IP out for 15 minutes.
 
 Railway service variables:
 
 | Variable | What it is |
 | --- | --- |
-| `GOOGLE_CLIENT_ID` | OAuth client ID from Google Cloud (Web application) |
-| `GOOGLE_CLIENT_SECRET` | That client's secret |
+| `DATABASE_URL` | Reference to this service's own Postgres (`Postgres-nTPQ`) |
 | `SESSION_SECRET` | Long random string used to sign the login cookie |
-| `BASE_URL` | Public URL, e.g. `https://rtb-directory-dashboard-production.up.railway.app` |
+| `BASE_URL` | Public URL, used to build invite links |
 | `ALLOWED_DOMAIN` | Optional, defaults to `junglecreations.com` |
 
-The Google client's authorised redirect URI must be `<BASE_URL>/auth/google/callback`.
-If any of the first three are missing, the server stays locked rather than
-serving the dashboard.
+If `DATABASE_URL` or `SESSION_SECRET` is missing, the server stays locked rather
+than serving the dashboard.
+
+To create an invite from the command line (e.g. a new first admin):
+
+```bash
+railway ssh --service rtb-directory-dashboard -- node invite.js name@junglecreations.com --admin
+```
+
+A Google sign-in version is kept on the `google-sign-in` branch for when a Google
+Cloud project is available.
 
 ## Updating the dashboard later
 
