@@ -1,0 +1,1231 @@
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Response to Brief Directory: Jungle Creations</title><style>:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#060606;color:#f6efe9}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #060606;
+    --surface: #0d0d0d;
+    --surface-alt: #0d0d0d;
+    --surface-raised: #111111;
+    --border: #7ee653;
+    --border-soft: rgba(126, 230, 83, 0.35);
+    --text: #f6efe9;
+    --text-muted: #c9c0b6;
+    --text-faint: #8f8579;
+    --ink: #111111;
+    --ink-soft: rgba(246, 239, 233, 0.06);
+    --ink-text: #f6efe9;
+    --lime: #7ee653;
+    --lime-strong: #9dfb7e;
+    --lime-text: #060606;
+    --chip-bg: #0d0d0d;
+    --chip-active-bg: #7ee653;
+    --chip-active-text: #060606;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 10px 26px rgba(0, 0, 0, 0.55);
+    --glow: 0 0 0 1px rgba(126, 230, 83, 0.15);
+    --radius-lg: 22px;
+    --radius-md: 16px;
+    --radius-sm: 11px;
+    color-scheme: dark;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #060606;
+      --surface: #0d0d0d;
+      --surface-alt: #0d0d0d;
+      --surface-raised: #111111;
+      --border: #7ee653;
+      --text: #f6efe9;
+      --text-muted: #c9c0b6;
+      --text-faint: #8f8579;
+      --ink: #111111;
+      --ink-soft: rgba(246, 239, 233, 0.06);
+      --ink-text: #f6efe9;
+      --lime: #7ee653;
+      --lime-strong: #9dfb7e;
+      --lime-text: #060606;
+      --chip-bg: #0d0d0d;
+      --chip-active-bg: #7ee653;
+      --chip-active-text: #060606;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 10px 26px rgba(0, 0, 0, 0.55);
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #060606;
+    --surface: #0d0d0d;
+    --surface-alt: #0d0d0d;
+    --surface-raised: #111111;
+    --border: #7ee653;
+    --text: #f6efe9;
+    --text-muted: #c9c0b6;
+    --text-faint: #8f8579;
+    --ink: #111111;
+    --ink-soft: rgba(246, 239, 233, 0.06);
+    --ink-text: #f6efe9;
+    --lime: #7ee653;
+    --lime-strong: #9dfb7e;
+    --lime-text: #060606;
+    --chip-bg: #0d0d0d;
+    --chip-active-bg: #7ee653;
+    --chip-active-text: #060606;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.5), 0 10px 26px rgba(0, 0, 0, 0.55);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 16px 64px;
+  }
+
+  h1, h2, h3, .card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+
+  /* header */
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 22px;
+  }
+
+  .hero-text .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text);
+    background: transparent;
+    border: 1.5px solid var(--border);
+    padding: 6px 14px 6px 10px;
+    border-radius: 999px;
+    margin-bottom: 14px;
+  }
+
+  .hero-text .eyebrow .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--lime);
+    flex-shrink: 0;
+    box-shadow: 0 0 6px rgba(126, 230, 83, 0.9);
+  }
+
+  .hero-text h1 {
+    font-size: clamp(26px, 3.8vw, 38px);
+    line-height: 1.18;
+    margin: 0 0 10px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+
+  .hero-text h1 .highlight {
+    background: var(--lime);
+    color: var(--lime-text);
+    padding: 1px 10px 3px;
+    border-radius: 10px;
+    display: inline-block;
+  }
+
+  .hero-text p {
+    margin: 0;
+    max-width: 62ch;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .stat-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 12px 18px;
+    min-width: 112px;
+    box-shadow: var(--shadow);
+  }
+
+  .stat-card .num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+  }
+
+  .stat-card .lbl {
+    font-size: 11px;
+    color: var(--text-faint);
+    margin-top: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  /* theme bar chart */
+  .theme-panel {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px 16px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .theme-panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .theme-panel-head h2 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 600;
+    color: var(--text);
+  }
+
+  .theme-panel-head .hint {
+    font-size: 12px;
+    color: var(--text-faint);
+    font-weight: 500;
+  }
+
+  .theme-panel .subhint {
+    font-size: 11.5px;
+    color: var(--text-faint);
+    margin: 0 0 14px;
+  }
+
+  .scale-axis {
+    display: grid;
+    grid-template-columns: 128px 1fr 48px;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .scale-axis .ticks {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: var(--text-faint);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .theme-bars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 8px 20px;
+  }
+
+  .theme-bar-row {
+    display: grid;
+    grid-template-columns: 128px 1fr 48px;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 4px 4px;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    text-align: left;
+    font-family: inherit;
+  }
+
+  .theme-bar-row:hover { background: var(--ink-soft); }
+
+  .theme-bar-row.active .theme-bar-label { color: var(--lime-strong); font-weight: 700; }
+
+  .theme-bar-row.active .theme-bar-label::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--lime-strong);
+    margin-right: 6px;
+  }
+
+  .theme-bar-label {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: capitalize;
+  }
+
+  .theme-bar-track {
+    position: relative;
+    height: 10px;
+    border-radius: 999px;
+    background: rgba(126, 230, 83, 0.14);
+    overflow: hidden;
+  }
+
+  .theme-bar-fill {
+    display: block;
+    height: 100%;
+    min-width: 10px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--lime) 0%, var(--lime-strong) 100%);
+    box-shadow: 0 0 8px rgba(126, 230, 83, 0.55);
+    transition: width 0.25s ease;
+  }
+
+  .theme-bar-count {
+    font-size: 12px;
+    color: var(--text);
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+  }
+
+  /* controls */
+  .controls {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 16px 18px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .controls-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .search-box {
+    position: relative;
+    flex: 1 1 240px;
+    min-width: 200px;
+  }
+
+  .search-box svg {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-faint);
+    pointer-events: none;
+  }
+
+  .search-box input {
+    width: 100%;
+    padding: 10px 12px 10px 36px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-soft);
+    background: var(--ink-soft);
+    color: var(--text);
+    font-size: 14px;
+    font-family: inherit;
+  }
+
+  .search-box input::placeholder { color: var(--text-faint); }
+
+  .search-box input:focus {
+    outline: 2px solid var(--lime);
+    outline-offset: -1px;
+  }
+
+  select {
+    padding: 10px 30px 10px 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-soft);
+    background-color: var(--ink-soft);
+    color: var(--text);
+    font-size: 13.5px;
+    font-family: inherit;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23f6efe9' fill='none' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 11px center;
+    cursor: pointer;
+  }
+
+  .view-toggle {
+    display: flex;
+    background: var(--ink-soft);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-sm);
+    padding: 3px;
+    gap: 2px;
+  }
+
+  .view-toggle button {
+    border: none;
+    background: transparent;
+    padding: 7px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .view-toggle button.active {
+    background: var(--lime);
+    color: var(--lime-text);
+  }
+
+  .chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 12px;
+  }
+
+  .chip {
+    border: 1px solid var(--border-soft);
+    background: var(--ink-soft);
+    color: var(--text);
+    font-size: 12.5px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-family: inherit;
+    text-transform: capitalize;
+    transition: background 0.12s, color 0.12s;
+  }
+
+  .chip:hover { border-color: var(--lime); }
+
+  .chip.active {
+    background: var(--lime);
+    color: var(--lime-text);
+    border-color: transparent;
+    font-weight: 700;
+  }
+
+  .chip.more-toggle {
+    background: transparent;
+    border-style: dashed;
+  }
+
+  .clear-btn {
+    border: none;
+    background: transparent;
+    color: var(--lime-strong);
+    font-size: 12.5px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 6px 8px;
+    display: none;
+  }
+
+  .clear-btn.show { display: inline-block; }
+
+  .results-line {
+    font-size: 12.5px;
+    color: var(--text-faint);
+    margin: 14px 2px 12px;
+    font-weight: 500;
+  }
+
+  .results-line strong { color: var(--text); }
+
+  /* card grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 14px;
+  }
+
+  .grid.list-view {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px 18px 16px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .tag {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: capitalize;
+    background: var(--lime);
+    color: var(--lime-text);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+
+  .card-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: baseline;
+  }
+
+  .card-pub {
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .card-date {
+    font-size: 11.5px;
+    color: var(--text-faint);
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+
+  .card h3 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .card h3 a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .card h3 a:hover { color: var(--lime-strong); }
+
+  .card h3 a svg {
+    vertical-align: -1px;
+    margin-left: 3px;
+    opacity: 0.5;
+  }
+
+  .card-looking {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    line-height: 1.55;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .card-findings {
+    margin: 2px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .card-findings li {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text);
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .card-findings li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1.5px solid var(--lime);
+  }
+
+  .card-findings li.hidden-finding { display: none; }
+
+  .more-findings {
+    align-self: flex-start;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 2px 0;
+    font-family: inherit;
+    box-shadow: inset 0 -2px 0 var(--lime);
+  }
+
+  .card-use-case {
+    background: rgba(126, 230, 83, 0.07);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 11px 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .card-use-case .use-case-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--lime-strong);
+  }
+
+  .card-use-case .use-case-label svg { flex-shrink: 0; }
+
+  .card-use-case p {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.55;
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+  }
+
+  .card-footer {
+    margin-top: auto;
+    padding-top: 4px;
+  }
+
+  .report-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    border: 1.5px solid var(--lime);
+    color: var(--text);
+    background: transparent;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 7px 13px;
+    border-radius: 999px;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.12s, color 0.12s;
+  }
+
+  .report-link:hover {
+    background: var(--lime);
+    color: var(--lime-text);
+  }
+
+  .report-link svg { flex-shrink: 0; }
+
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-faint);
+  }
+
+  .empty-state .big {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  /* research routes section */
+  .routes-section {
+    margin-top: 40px;
+  }
+
+  .routes-head {
+    margin-bottom: 6px;
+  }
+
+  .routes-head h2 {
+    font-size: clamp(20px, 2.6vw, 26px);
+    margin: 0 0 6px;
+    color: var(--text);
+  }
+
+  .routes-head p {
+    margin: 0 0 18px;
+    color: var(--text-muted);
+    font-size: 13.5px;
+    max-width: 68ch;
+    line-height: 1.6;
+  }
+
+  .routes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+  }
+
+  .route-card {
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: var(--shadow);
+  }
+
+  .route-num {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--lime-strong);
+    letter-spacing: 0.02em;
+  }
+
+  .route-card h3 {
+    margin: 0;
+    font-size: 16.5px;
+    line-height: 1.3;
+    color: var(--text);
+  }
+
+  .route-card p {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+  }
+
+  .route-source {
+    margin-top: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .route-source span {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: var(--text-faint);
+    border: 1px solid var(--border-soft);
+    border-radius: 999px;
+    padding: 3px 9px;
+  }
+
+  footer {
+    margin-top: 32px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-faint);
+  }
+
+  footer a { color: var(--text-faint); }
+
+  @media (max-width: 640px) {
+    .theme-bars { grid-template-columns: 1fr; }
+  }
+</style>
+<style>
+  /* additions for the sectioned themes panel and RTB-specific card bits */
+  .sheet-sections { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:14px; }
+  .sheet-section { border:1px solid var(--border-soft); border-radius:var(--radius-md); padding:12px 12px 10px; background:var(--surface-raised); }
+  .sheet-section.active { border-color:var(--lime); box-shadow:var(--glow); }
+  .sheet-head { display:flex; justify-content:space-between; align-items:baseline; gap:10px; width:100%; border:none; background:transparent; color:var(--text); cursor:pointer; padding:2px 4px 8px; font-family:inherit; text-align:left; }
+  .sheet-head .sheet-name { font-family:'Playfair Display', Georgia, serif; font-size:15.5px; font-weight:600; }
+  .sheet-head .sheet-count { font-size:11px; font-weight:600; color:var(--text-faint); text-transform:uppercase; letter-spacing:0.03em; white-space:nowrap; }
+  .sheet-head:hover .sheet-name { color:var(--lime-strong); }
+  .sheet-section .scale-axis { margin:0 0 4px; }
+  .sheet-section .theme-bars { grid-template-columns:1fr; gap:2px; }
+  .tag.sheet-tag { background:transparent; color:var(--text); border:1px solid var(--border-soft); }
+  .card-audience { font-size:12.5px; color:var(--text-muted); line-height:1.55; margin:0; }
+  .card-audience b { color:var(--text); font-weight:600; }
+  .card-flag { font-size:12px; line-height:1.5; color:#f0c46a; border-left:2px solid #f0c46a; padding:1px 0 1px 9px; margin:0; }
+  .card-footer { display:flex; flex-wrap:wrap; gap:8px; }
+  .no-attach { font-size:12px; color:var(--text-faint); font-style:italic; }
+  .no-tags { font-size:11px; color:var(--text-faint); }
+  .filter-note { font-size:12px; color:var(--text-faint); margin-top:10px; }
+  .filter-note strong { color:var(--lime-strong); }
+  .sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  :focus-visible { outline:2px solid var(--lime-strong); outline-offset:2px; }
+
+  /* brand lift studies section */
+  .jump-links { display:flex; gap:8px; margin-top:14px; flex-wrap:wrap; }
+  .jump-links a { font-size:12px; font-weight:700; color:var(--text); text-decoration:none; border:1.5px solid var(--lime); border-radius:999px; padding:6px 12px; }
+  .jump-links a:hover { background:var(--lime); color:var(--lime-text); }
+  .bls-section { margin-top:48px; margin-bottom:56px; padding-top:8px; padding-bottom:32px; border-top:1px solid var(--border-soft); border-bottom:1px solid var(--border-soft); }
+  .bls-head h2 { font-size:clamp(22px, 3vw, 30px); margin:18px 0 6px; color:var(--text); }
+  .bls-head p { margin:0 0 18px; color:var(--text-muted); font-size:13.5px; max-width:74ch; line-height:1.6; }
+  .bls-head p a { color:var(--text); }
+  .bls-head .stat-row { margin-bottom:20px; }
+  .kpi-chips { display:flex; flex-wrap:wrap; gap:7px; margin:4px 0 16px; }
+  .chip.neg-chip { opacity:0.55; }
+  .lead-row { display:grid; grid-template-columns:minmax(150px, 230px) 1fr 64px; align-items:center; gap:10px; padding:4px; border-radius:8px; }
+  .lead-row a { color:var(--text-muted); text-decoration:none; font-size:12.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .lead-row a:hover { color:var(--lime-strong); }
+  .lead-row a small { color:var(--text-faint); font-size:11px; }
+  .lead-track { position:relative; height:10px; border-radius:999px; background:rgba(126, 230, 83, 0.14); overflow:visible; }
+  .lead-fill { display:block; height:100%; min-width:4px; border-radius:999px; background:linear-gradient(90deg, var(--lime) 0%, var(--lime-strong) 100%); box-shadow:0 0 8px rgba(126, 230, 83, 0.45); }
+  .lead-fill.neg { background:#e88a7c; box-shadow:none; }
+  .bench-mark { position:absolute; top:-4px; bottom:-4px; width:2px; background:var(--text); opacity:0.8; border-radius:2px; }
+  .bench-mark.overall { background:#f0c46a; }
+  .kpi-list li .cmp { font-size:10.5px; font-weight:700; padding:1px 6px; border-radius:999px; margin-left:6px; white-space:nowrap; }
+  .kpi-list li .cmp.above { background:rgba(126,230,83,0.16); color:var(--lime-strong); }
+  .kpi-list li .cmp.below { background:rgba(232,138,124,0.16); color:#e88a7c; }
+
+  .lead-val { font-size:12px; font-weight:700; text-align:right; font-variant-numeric:tabular-nums; color:var(--text); }
+  .lead-val.neg { color:#e88a7c; }
+  .lead-legend { font-size:11.5px; color:var(--text-faint); margin:10px 0 0; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+  .lead-legend .key { display:inline-block; width:2px; height:12px; background:var(--text); vertical-align:middle; margin-right:6px; }
+  .kpi-list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:5px; }
+  .kpi-list li { display:flex; justify-content:space-between; gap:10px; font-size:12.5px; color:var(--text-muted); border-bottom:1px dashed rgba(126,230,83,0.15); padding-bottom:4px; }
+  .kpi-list li b { color:var(--text); font-variant-numeric:tabular-nums; }
+  .kpi-list li.neg b { color:#e88a7c; }
+  .kpi-list li.sel { color:var(--lime-strong); }
+  .kpi-list li.sel b { color:var(--lime-strong); }
+  .card-rtb { font-size:12px; color:var(--text-faint); margin:0; }
+  .card-rtb b { color:var(--text-muted); font-weight:600; }
+</style>
+
+</head><body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-text">
+      <span class="eyebrow"><span class="dot"></span>Jungle Creations &middot; Response to Brief Directory</span>
+      <h1>Every response to brief, <span class="highlight">ready to reuse</span></h1>
+      <p>Every brief we've responded to, with the stats, audience insights and campaign results we used to win it, taken from the <a href="https://docs.google.com/spreadsheets/d/189_JwvMd5zzkM76Qn0Mmqi-DfQGEVON-HoPxIF1nlP4/edit" target="_blank" rel="noopener" style="color:var(--text)">Response to Brief (RTB) Directory</a>. Themes are sectioned by sheet and filterable by the keywords in column G, and every card's button opens the attachment from column A of the directory. The directory stays the record of truth; this is the fast way to find proof for the next brief.</p>
+      <div class="jump-links"><a href="#cardGrid">RTB directory</a><a href="#bls">Brand lift studies</a></div>
+    </div>
+    <div class="stat-row" id="statRow"></div>
+  </div>
+
+  <div class="theme-panel">
+    <div class="theme-panel-head">
+      <h2>Themes at a glance, by sheet</h2>
+      <span class="hint">click a sheet or keyword to filter</span>
+    </div>
+    <p class="subhint" id="themeSubhint"></p>
+    <div class="sheet-sections" id="sheetSections"></div>
+  </div>
+
+  <div class="controls">
+    <div class="controls-row">
+      <div class="search-box">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        <label for="searchInput" class="sr-only">Search</label>
+        <input type="text" id="searchInput" placeholder="Search clients, stats, audiences, keywords&hellip;" />
+      </div>
+      <label for="sheetSelect" class="sr-only">Sheet</label>
+      <select id="sheetSelect"></select>
+      <label for="brandSelect" class="sr-only">Jungle brand</label>
+      <select id="brandSelect"></select>
+      <label for="sortSelect" class="sr-only">Sort</label>
+      <select id="sortSelect">
+        <option value="newest">Newest first</option>
+        <option value="oldest">Oldest first</option>
+        <option value="az">Client A-Z</option>
+        <option value="brand">Jungle brand A-Z</option>
+      </select>
+      <div class="view-toggle">
+        <button id="viewGrid" class="active" type="button">Grid</button>
+        <button id="viewList" type="button">List</button>
+      </div>
+    </div>
+    <div class="filter-note" id="chipNote"></div>
+    <div class="chip-row" id="themeChipRow"></div>
+    <button class="clear-btn" id="clearBtn" type="button">Clear all filters</button>
+  </div>
+
+  <div class="results-line" id="resultsLine" aria-live="polite"></div>
+
+  <div class="grid" id="cardGrid"></div>
+
+  <section class="bls-section" id="bls" aria-labelledby="blsTitle">
+    <div class="bls-head">
+      <h2 id="blsTitle">Brand lift studies</h2>
+      <p id="blsIntro"></p>
+      <div class="stat-row" id="blsStats"></div>
+    </div>
+
+    <div class="theme-panel">
+      <div class="theme-panel-head">
+        <h2 id="leadTitle">Biggest uplifts</h2>
+        <span class="hint">pick a KPI to rank every study that measured it</span>
+      </div>
+      <div class="kpi-chips" id="kpiChips"></div>
+      <div id="leaderboard"></div>
+      <div class="lead-legend" id="leadLegend"></div>
+    </div>
+
+    <div class="controls">
+      <div class="controls-row">
+        <label for="blsDriver" class="sr-only">Biggest uplift in</label>
+        <select id="blsDriver"></select>
+        <label for="blsProvider" class="sr-only">Provider</label>
+        <select id="blsProvider"></select>
+        <label for="blsYear" class="sr-only">Year</label>
+        <select id="blsYear"></select>
+        <label for="blsSort" class="sr-only">Sort</label>
+        <select id="blsSort">
+          <option value="uplift">Biggest uplift first</option>
+          <option value="newest">Newest first</option>
+          <option value="az">Brand A-Z</option>
+        </select>
+      </div>
+      <button class="clear-btn" id="blsClear" type="button">Clear all filters</button>
+    </div>
+
+    <div class="results-line" id="blsResults" aria-live="polite"></div>
+    <div class="grid" id="blsGrid"></div>
+  </section>
+
+
+  <footer>Built from the <a href="https://docs.google.com/spreadsheets/d/189_JwvMd5zzkM76Qn0Mmqi-DfQGEVON-HoPxIF1nlP4/edit" target="_blank" rel="noopener">Response to Brief (RTB) Directory</a> &middot; clean companion sheet: <a href="https://docs.google.com/spreadsheets/d/16_ZxJAroiEF2QNel45OuQOgaooehmvV-E6wQP8ECC8I/edit" target="_blank" rel="noopener">RTB Directory (dashboard data)</a> &middot; last refreshed 24 September 2026</footer>
+</div>
+
+<script type="application/json" id="data">[{"title": "Nutella", "campaign": "2 Sides to the Pancake", "brands": ["Twisted Green", "Twisted", "VT"], "date": "2025-11", "audience": "18-54 year olds", "lookingAt": "A Pancake Day brief: Twisted chefs and creators each put their own spin on pancakes, with a Comic Relief tie-in and meme-led social content through VT.", "findings": ["The insights cell in the directory repeats the Itsu evening-menu uplift figures word for word, so they've been left out here rather than credited to Nutella.", "The real Pancake Day brand lift numbers should be in the linked deck."], "themes": ["Pancake Day", "Memes", "Dessert", "Confectionery"], "useThis": "Once the real uplift numbers are in, this is our cleanest seasonal-moment case for a sweet spread or dessert brand: a fixed date in the calendar, a chef versus creator format and a charity hook.", "flag": "Key insights look copied from the Itsu row.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 2, "id": "nutella-2-sides-to-the-pancake", "results": false, "attachments": ["https://docs.google.com/presentation/d/1REudVIOvNdFrqYXVrsKWdTVpgkE6nLbGcuFfK2YIXoA/edit?slide=id.p2"]}, {"title": "Nando's", "campaign": "World Cup: Clean Sheet Shirt and Nan Knows", "brands": ["VT", "Twisted"], "date": "2025-10", "audience": "Gen Z 18-25, lapsed heartland fans 30-40, and football fans", "lookingAt": "Two World Cup routes: a limited-run bib styled like an England shirt with three wings instead of three lions, and Grime Gran dishing out pep talks and predictions with VT and Livewire, powered by Nando's delivery.", "findings": ["Every month Jungle reaches 331k Gen Z on Twisted and 856k on VT.", "It also reaches 1.1M of Nando's heartland audience on Twisted and 4.6M on VT, over-indexing nationally.", "Football fan reach is 953k on Twisted and 2.4M on VT.", "Twisted followers are 2.4x more likely to say food makes the experience better, and 3x more likely to have eaten chicken out in the last week.", "58% of Gen Z dual-screen during major tournaments."], "themes": ["Football", "World Cup", "Chicken"], "useThis": "The 58% dual-screening stat plus the 3x chicken-out-last-week index is a ready-made case for any restaurant or delivery brand around a tournament: fans are on their phones mid-match and already eating out.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 3, "id": "nando-s-world-cup-clean-sheet-shirt-and-nan-knows", "results": false, "attachments": ["https://docs.google.com/presentation/d/1IXrNUmKASpjebhoNG5d7pVOzw2xByagL/edit?slide=id.g38d33d8e8b8_0_57"]}, {"title": "Doritos", "campaign": "#BYOD: Bring Your Own Doritos", "brands": ["Twisted"], "date": "2025-06", "audience": "Social Remixers: 12.5M people, 43% aged 18-34, mostly light crisp buyers who love shared moments with friends and family", "lookingAt": "Moving Doritos from snack to meal with the Loaded range. A URL to IRL campaign using Twisted, creators and street food vendors to get Loaded talked about, then tried at a Loaded London event.", "findings": ["The previous campaign drove a 97%+ uplift in people saying they'd use Doritos to elevate a meal.", "Among people who eat crisps every day, that uplift was 201%+.", "The previous Loaded campaign generated 5k real-world orders.", "Twisted recipes that load up Doritos have pulled in 6M+ views."], "themes": ["URL to IRL", "Snacks", "Creators and influencers"], "useThis": "One of the few rows with hard post-campaign numbers. Lead with the 201% daily-crisp-eater uplift when a snack brand wants a new meal occasion, and use the 5k orders to prove URL to IRL actually converts.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 4, "id": "doritos-byod-bring-your-own-doritos", "results": true, "attachments": ["https://docs.google.com/presentation/d/13Mc8iPPvCRQn997IWmKSUgyYHEUJ1OxHPsXhcejaWrg/edit?slide=id.g3561bde8499_0_396"]}, {"title": "Skittles", "campaign": "Skittles Chosen Family", "brands": ["FourNine"], "date": "2025-04", "audience": "18-34, LGBTQIA+ audiences", "lookingAt": "A rainbow-filled series where a host visits LGBTQIA+ chosen families and throws them the ultimate game night, celebrating their bonds and the support that makes them family.", "findings": ["FourNine followers are 314% more likely than the average UK adult to have been to a Pride event.", "VT followers are 175% more likely.", "64% of the LGBTQIA+ community say they're more likely to buy from brands that represent them.", "16% of the FourNine audience identify as LGBTQIA+."], "themes": ["Snacks", "Confectionery", "LGBTQIA+", "Pride"], "useThis": "For any Pride brief, the 314% Pride attendance index and 16% LGBTQIA+ share make FourNine the lead platform with VT for scale. The 64% stat backs going further than a rainbow logo.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 5, "id": "skittles-skittles-chosen-family", "results": false, "attachments": ["https://docs.google.com/presentation/d/1Ik_xCQrfhGN4HjbFtkYwZFJMzLKtaEGWFZSMc8W59oo/edit?slide=id.g30c6edb4fc2_0_115"]}, {"title": "Itsu", "campaign": "Evening menu creator push", "brands": ["Retainer"], "date": "2025-10", "audience": "Desk Dashers (London workers eating on the go), Sushi Seekers (18-34, sit-down diners with long commutes) and Taste Chasers (18-34, suburban, curious cooks)", "lookingAt": "Creators who feel like the audience rather than influencers shouting into the void, telling stories about Itsu's evening menu, from fuelling up before the theatre to unwinding after a long day.", "findings": ["+41% uplift in message recall.", "+26% uplift in agreeing Itsu is a place to eat in the evening.", "+154% increase in considering Itsu for an evening meal.", "+50% uplift in intent to actually eat at Itsu in the evening."], "themes": ["Restaurants", "URL to IRL", "Creators and influencers"], "useThis": "The +154% consideration jump is our headline for any daypart brief, like lunch brands moving into dinner. It shows creator content can shift when people think of a brand, not just whether they know it.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 6, "id": "itsu-evening-menu-creator-push", "results": true, "attachments": ["https://docs.google.com/presentation/d/1tendTLfNoOfu8vqsZmoZOULNq-ZWJ_dWZoUdwYJBxLo/edit?slide=id.g37ac47262ab_0_3225"]}, {"title": "Inch's", "campaign": "Supper clubs and reactive twists", "brands": ["Twisted"], "date": "2025-01", "audience": "18-54 year olds", "lookingAt": "Landing Inch's as a tasty, sustainable cider. Twisted took chefs into supper clubs to cook bold dishes with the cider, plus reactive formats twisting food trends, like a cider float or a pickle party board.", "findings": ["27M total brand moments across all assets.", "480 days (11,534 hours) of total time spent with brand moments.", "Each impression delivered 3.08 seconds of Inch's messaging.", "The strongest uplift was recall that Inch's tastes really good, more than 3x the benchmark.", "39% of Twisted followers have tried a recipe they saw on the page."], "themes": ["Cider", "Alcohol", "Taste", "Drinks", "Food", "Supper clubs", "URL to IRL"], "useThis": "Great for drinks briefs where the product has to be tasted to be believed: taste recall at 3x benchmark shows food-led content can carry a drink's flavour message.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 7, "id": "inch-s-supper-clubs-and-reactive-twists", "results": true, "attachments": ["https://docs.google.com/presentation/d/1HjjOukKw1CrXraxSh4_jcGiZaf4zH5ONrZ7C3rhGBYk/edit?slide=id.g32765bbf892_1_58"]}, {"title": "Belazu", "campaign": "Foodie hosting", "brands": ["Twisted"], "date": "2025-06", "audience": "Established, ABC1, mostly London and the South East, with a push beyond the M25", "lookingAt": "A foodie campaign about doing rather than having: hosting dinner parties and bringing fresh ingredients back from holiday.", "findings": ["76% of Twisted followers like experimenting with new recipes, 1.25x the national average.", "71% enjoy cooking for themselves and others, 1.2x the national average.", "They're 3.5x more likely to pick restaurants for novel or creative dishes."], "themes": ["Supper clubs", "Dinner parties", "Food", "Foodies", "Experiences", "Hosting"], "useThis": "The 3.5x novelty index is our strongest proof that Twisted followers go looking for new flavours, handy for any premium or unfamiliar ingredient trying to earn a spot in home cooking.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 8, "id": "belazu-foodie-hosting", "results": false, "attachments": ["https://docs.google.com/document/d/1EPvVhh0Ga5iwDwWxaoviyB4vuBYfP5d0YAv_8xQpygA/edit?tab=t.0"]}, {"title": "Boursin", "campaign": "Christmas showstoppers", "brands": ["Twisted"], "date": "2025-09", "audience": "ABC1 18-54", "lookingAt": "Positioning Boursin as the secret weapon for Christmas hosting, with five recipe videos in the run-up to Christmas, one per course from canapés to dessert.", "findings": ["45% of the audience are ABC1 18-54.", "They're 1.9x more likely to follow recipes they see on social.", "They're 4.5x more likely to cook with other people at least once a week."], "themes": ["Cheese", "Christmas", "Holidays and festive", "Cooking with friends", "Hosting", "Dinner parties"], "useThis": "The 4.5x cooking-with-others stat is a strong hook for any sharing or hosting product at Christmas. Pair it with the 1.9x recipe-following stat to show recipe videos actually get cooked.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 9, "id": "boursin-christmas-showstoppers", "results": false, "attachments": ["https://docs.google.com/presentation/d/1_j_4oCnj8A_GWji4l0WSnvgOsLlW-CnY/edit?slide=id.g37a4c8f9f5e_1_99"]}, {"title": "Chicago Town", "campaign": "Pizza and big moments", "brands": ["Twisted", "FourNine", "VT"], "date": "2025-09", "audience": "Under 25s", "lookingAt": "Building awareness with Gen Z around moments and interests like gaming, leaning on the satisfaction of pizza: the dopamine hit, the big moment, the pizza that hits the spot.", "findings": ["FourNine followers are 2.3x more likely to eat chilled or frozen pizza or garlic bread several times a week.", "Twisted followers are 1.2x more likely to consider buying frozen pizza in the supermarket."], "themes": ["Pizza", "Frozen food", "Gaming"], "useThis": "FourNine's 2.3x frozen pizza index is the surprise here. It isn't our food brand, yet it over-indexes hardest, so Gen Z convenience food briefs shouldn't default to Twisted alone.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 10, "id": "chicago-town-pizza-and-big-moments", "results": false, "attachments": ["https://docs.google.com/document/d/1Ho5t_mjfPuvbC9V_j16ws3cMjS_ULCIFCgOjFistwvk/edit?tab=t.0"]}, {"title": "Eat Real", "campaign": "Social-first retainer", "brands": ["Retainer"], "date": "2025-04", "audience": "Wide audience, not specified", "lookingAt": "Positioning Eat Real as an inspiring, disruptive snack through a social-first approach, backed by paid media and influencers.", "findings": ["157M minutes watched in 2024.", "150M+ followers and subscribers.", "17bn annual views."], "themes": ["Snacks", "Health", "Healthy snacks"], "useThis": "These are Jungle network scale numbers, useful as a credentials slide in retainer pitches, but they're 2024 figures and need a refresh before reuse.", "flag": "Network-wide scale stats, not insights specific to Eat Real's audience.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 11, "id": "eat-real-social-first-retainer", "results": false, "attachments": ["https://docs.google.com/presentation/d/1t_pIDQVgZdDd8n93YSHpH66obMz9ekRFDHLpiQESzRo/edit?slide=id.g34baaada4e3_0_589"]}, {"title": "Goodfellas", "campaign": "Pizza game show", "brands": ["Twisted"], "date": "2024-10", "audience": "Gen Z focused, with wide appeal", "lookingAt": "A surreal, pizza-themed Twisted game show giving creators' families and friends a shot at a big prize, followed by vox pop social content.", "findings": ["71% of a typical week is spent disconnected from others in the household, just 51 minutes a day of real connection.", "70% of the audience treat themselves with food that isn't considered healthy.", "66% of Twisted followers consider frozen pizza, vs 55% nationally.", "60% have bought a product because of Twisted content.", "Life stage: 46% pre-family, 14% young family, 22% older family.", "Italian is the audience's second favourite cuisine, after British.", "30% eat frozen pizza several times a month, 1.6x the UK average."], "themes": ["Pizza", "Frozen food", "Gaming", "Family", "Game show", "Junk food"], "useThis": "The 51 minutes a day of household connection is a great emotional opener for any family or midweek-meal brief, and the frozen pizza numbers make this the go-to row alongside Chicago Town.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 12, "id": "goodfellas-pizza-game-show", "results": false, "attachments": ["https://docs.google.com/presentation/d/19iilc7Xb3_R8asikMNM67nFlVWYumkTu/edit?slide=id.p1"]}, {"title": "Kopparberg", "campaign": "Sunshine States of Mind", "brands": ["FourNine"], "date": "2025-08", "audience": "Gen Z", "lookingAt": "A bespoke FourNine series exploring different sunshine states of mind, turning emotions into stories about how we all bring the sunshine.", "findings": ["33% of Gen Z actively look for emotion-led content (McKinsey, 2024).", "For Gen Z, moods aren't hidden, they're styled and shared. Honesty beats perfection.", "This audience already shares feelings openly through main character moments, daily vlogs and vibe check posts."], "themes": ["Coming of age", "Emotion-led content", "Drinks", "Authenticity", "Honesty"], "useThis": "The 33% stat comes from McKinsey, which makes it more persuasive in a pitch than our own panel data. Reuse it for any Gen Z brand that wants emotional storytelling over product-first content.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 13, "id": "kopparberg-sunshine-states-of-mind", "results": false, "attachments": ["https://docs.google.com/presentation/d/1_CBg4kqF0Hqn7yiYp4Xeu6axkq5ydDH0xj2Fu0MV5MY/edit?slide=id.g372781bdf17_1_10"]}, {"title": "LiveKindly", "campaign": "Like a Boss", "brands": ["Twisted", "Twisted Green"], "date": "2025-10", "audience": "15-34, urban house-sharers, active, flexitarian and budget-savvy. 60% use meal planning apps and 37% shop at weekends", "lookingAt": "Proving plant-based isn't bland or complicated, and that the Like range handles any moment: a manic Monday, a last-minute hangout, or the in-laws turning up unannounced.", "findings": ["Vegan food is often seen as high effort, fussy or complicated, so curious people still avoid it.", "That shows up as hesitation at the freezer aisle and a default back to meat or familiar convenience food.", "60% of the target audience use meal planning apps and 37% shop at weekends.", "They're shaped by Monday reset culture, with a health focus early in the week."], "themes": ["Plant-based", "Prepared meals"], "useThis": "The freezer-aisle hesitation insight is a reusable barrier statement for any plant-based brief, and the Monday reset habit gives a natural weekly slot to post into.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 14, "id": "livekindly-like-a-boss", "results": false, "attachments": ["https://docs.google.com/presentation/d/1OLSpUIt04Zjv3a6KQvnSOn8Pt-_QEqdFgpusVzjpTxc/edit?slide=id.g39bdc6f4eed_0_2918"]}, {"title": "Aperol", "campaign": "Taste in Music", "brands": ["Twisted"], "date": "2025-07", "audience": "Gen Z", "lookingAt": "Aperol brings joy back to cooking by pairing it with music: the kitchen becomes a stage where every chop and sizzle is part of the performance.", "findings": ["79% of the audience have bought a product after seeing a Twisted video.", "Twisted followers are 7x more likely to enjoy cocktails at home.", "Cocktail content performs 5x better than regular content on average."], "themes": ["Alcohol", "Music", "Events"], "useThis": "The 7x cocktails-at-home and 5x cocktail content performance are our strongest drinks stats. Use them for any spirit or aperitif brand chasing at-home occasions.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 15, "id": "aperol-taste-in-music", "results": false, "attachments": ["https://docs.google.com/document/d/10ePqUrQzZ6MW33T9FTj9_95aIXKQzTyFW-FTpcOKV8I/edit?tab=t.0"]}, {"title": "Jordans", "campaign": "Magic Moments", "brands": ["Twisted"], "date": "2025-11", "audience": "People moving away from cereal towards healthier options", "lookingAt": "A \"what I eat in a day\" series following food-adjacent creators, like a pizza brand CEO or a fitness influencer, with Jordans products timestamped into their busy days.", "findings": ["93% of the audience (3.9M people) eat cereal or cereal bars at least monthly.", "Twisted over-indexes against the national average for both target segments.", "1.8M of the audience are into indulging.", "1.5M are conscious about nutrition and wellbeing."], "themes": ["Cereal", "Health", "Taste", "Day in the life"], "useThis": "The split between 1.8M indulgers and 1.5M nutrition-watchers lets us pitch healthy-but-tasty products to both halves of the audience in one plan.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 16, "id": "jordans-magic-moments", "results": false, "attachments": ["https://docs.google.com/presentation/d/13lhzAZFzQ_BxpGBtg_U0mU1Uwu5VmlMY96hETXMvaSc/edit?slide=id.g36e595fdba9_0_956"]}, {"title": "Mama Noodles", "campaign": "Personality-led recipe series", "brands": ["Twisted"], "date": "2025-04", "audience": "British consumers and Chinese students in the UK, busy people who want authentic flavour, plus mums and kids for snacks", "lookingAt": "Entertaining, personality-led recipe TikToks and Reels showing off the variety, versatility and flavour of the range.", "findings": ["Twisted followers are 1.5x more likely to spend up to £50 a month on rice products.", "They're 3x more likely to choose authentic, premium products.", "Mums are 3x more likely than average to need snacks on the go."], "themes": ["Parents", "Snacks", "Prepared meals", "Premium", "Authenticity", "World food", "Noodles"], "useThis": "The 3x authentic-premium stat is our best proof for world food brands that want to grow beyond their core heritage audience.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 17, "id": "mama-noodles-personality-led-recipe-series", "results": false, "attachments": ["https://docs.google.com/presentation/d/1TB772N_6b6bVlBYJq8QCIN9pj8tQeuhSpmdQNdJVqrQ/edit?slide=id.g349a6ba65b8_0_24"]}, {"title": "Maynards Bassetts", "campaign": "The Confectional Booth", "brands": ["VT"], "date": "2024-04", "audience": "35-54 year olds", "lookingAt": "A confession booth where people own up to real, slightly naughty experiences, taking buzz from IRL to URL with Maynards at the centre.", "findings": ["42% of VT's audience are 25-54 and 28% are 55+.", "1 in 4 VT followers are single.", "They're 2.2x more likely to use social media for flirting.", "They're 2.6x more likely to use dating apps regularly.", "They're 2x more likely to say comedy is their favourite content online."], "themes": ["Dating", "Confectionery", "Snacks", "Older audiences"], "useThis": "One of the few rows proving VT reaches older audiences (28% aged 55+). Good for treat brands targeting 35+ with a cheeky, comedy-led tone.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 18, "id": "maynards-bassetts-the-confectional-booth", "results": false, "attachments": ["https://docs.google.com/presentation/d/1GJ_wOhGx_CcMr80Wf8z3uNV_RGR8huBp/edit?slide=id.g350196630f5_0_35"]}, {"title": "Ninja", "campaign": "Give it a Fry", "brands": ["Twisted"], "date": "2024-12", "audience": "All adults 18-55, focused on meal preppers", "lookingAt": "Twisted chefs and creators tackle air fryer sceptics head on and show what the Ninja Double Stack can really do.", "findings": ["In 2023 Twisted published 29 air fryer videos: 8.7M plays, a 40% average view-through rate, 1.2M minutes watched and 21k saves.", "Air fryer content grew in 2024 vs 2023: +17% reach, +159% watch time, +38% engagement rate and +24% shares.", "22% have spoken about Ninja in the last week.", "46% think Ninja has a reputation for good quality."], "themes": ["Air fryer", "Meal prep", "Snacks"], "useThis": "The +159% year-on-year watch time is a strong category-momentum stat for any kitchen appliance or meal prep brand, though it's two years old now and worth refreshing.", "flag": "No source deck linked in the directory.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 19, "id": "ninja-give-it-a-fry", "results": true, "attachments": []}, {"title": "Ocado", "campaign": "Lifestyles delivered", "brands": ["Twisted"], "date": "2025-04", "audience": "35+, medium to high earners, 60% female, leaning London and the South East", "lookingAt": "The aspirational lifestyles on our feeds, from foodie families to gut health fans, delivered to the door by Ocado, brought to life by Twisted chefs and creators.", "findings": ["65% of the audience are ABC1 35+.", "Average income of £43k vs £35k nationally, flagged as outdated in the directory.", "60% have bought something Twisted recommended."], "themes": ["ABC1", "Older audiences", "Delivery", "Foodies", "Medium and high earners"], "useThis": "Solid proof Twisted reaches affluent 35+ shoppers. Refresh the income figure before reusing it, the directory itself marks it as out of date.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 20, "id": "ocado-lifestyles-delivered", "results": false, "attachments": ["https://drive.google.com/drive/search?q=ocado"]}, {"title": "Sainsbury's", "campaign": "Diwali, year two", "brands": ["Twisted"], "date": "2025-10", "audience": "Diwali-celebrating audiences of all ages", "lookingAt": "Building on 2024's Diwali campaign, going deeper into South Asian creators' families and traditions, with more focus on getting people to consider Sainsbury's products.", "findings": ["65k more monthly Twisted followers recreate recipes than before last year's campaign.", "Twisted followers are 2.5x more likely to celebrate Diwali.", "2.7M main shoppers reached monthly across Pinterest, Meta and TikTok.", "They're 2x more likely to have South Asian heritage.", "16% are open to switching supermarkets, 2.6x the average.", "1.4M have shopped at Sainsbury's in the last 30 days."], "themes": ["Supermarkets and grocery", "World food", "Holidays and festive", "Diwali", "South Asian"], "useThis": "16% open to switching supermarkets (2.6x average) is gold for any grocery pitch, and the year-on-year jump in recipe recreation shows why repeat cultural-moment partnerships pay off.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 21, "id": "sainsbury-s-diwali-year-two", "results": false, "attachments": ["https://docs.google.com/presentation/d/1FR8avyF4iql4Gy2NLFKn-3VdRXluwedy3n_BC4avovU/edit?slide=id.g36ab7d3ae7f_0_2806"]}, {"title": "Tate & Lyle", "campaign": "A Breakfast Not Worth Skipping", "brands": ["Twisted"], "date": "2025-03", "audience": "35-54 year olds", "lookingAt": "Launching Lyle's Maple Drizzle with breakfast recipes that look too good to skip.", "findings": ["Twisted partnerships can drive up to 2x the uplift in purchase intent (MBS study).", "They can drive up to 4x the uplift in favourability (MBS study).", "A Twisted Bar partnership drove 235k clicks to a client's website.", "25% of people in the UK skip breakfast four times a week, because they're short on time or nothing appeals."], "themes": ["Breakfast", "Older audiences", "Maple syrup", "URL to IRL", "Meal prep"], "useThis": "The MBS 2x purchase intent and 4x favourability figures are third-party backed and work in almost any Twisted pitch. The 25% breakfast-skipper stat suits cereal, bakery or spreads.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 22, "id": "tate-lyle-a-breakfast-not-worth-skipping", "results": true, "attachments": ["https://docs.google.com/presentation/d/13Vs2-nYhVK0qrZ5YTqvqb7W--vAYPliI2af-1UNvAoA/edit?slide=id.g30c6edb4fc2_0_115"]}, {"title": "Tesco", "campaign": "Sounds like a Plan...t!", "brands": ["Twisted", "Twisted Green", "VT"], "date": "2024-12", "audience": "35-64, 64% ABC1, household income around £37k, over-index on talking about healthy living", "lookingAt": "A week of nutritious plant-based recipes paired with Tesco's Root & Soul range, road-tested on an influencer's busy schedule.", "findings": ["56% of Twisted followers are open to meat alternatives.", "72% have eaten a meat alternative before.", "VT's audience is even more open to vegan diets and meat alternatives.", "More detail on dietary habits and income sits in a linked doc."], "themes": ["Plant-based", "Health", "Meal prep", "Supermarkets and grocery"], "useThis": "72% have already tried a meat alternative, so plant-based briefs can skip the \"try it once\" pitch and focus on making it a weekly habit.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 23, "id": "tesco-sounds-like-a-plan-t", "results": false, "attachments": ["https://docs.google.com/presentation/d/1h0xEfzL2xUclLASN7A3h8A5bNF-tAjCYLj69Sf_Zbjg/edit?slide=id.g2e0b0e4ac0e_1_543"]}, {"title": "Vita Coco", "campaign": "Ramadan with Twisted", "brands": ["Twisted"], "date": "2025-07", "audience": "Ramadan-celebrating audiences", "lookingAt": "Recipe videos hosted by Muslim creators sharing their traditions and cooking an Iftar dish with Vita Coco, Ramadan 101 explainers, and sampling for anyone ordering food around Iftar through Twisted London.", "findings": ["16% of the audience are from ethnically diverse backgrounds, around 2.6M people.", "They're 3.5x more likely to buy halal products regularly.", "Twisted reaches 12% of everyone in the UK who celebrates Ramadan.", "They're 14% more likely than average to be the main shopper.", "68% use Twisted recipes every month, roughly 6.8M recipes cooked.", "60% have researched or bought a product seen on Twisted."], "themes": ["Ramadan", "Halal food", "URL to IRL", "World food", "Flexitarian"], "useThis": "Reaching 12% of UK Ramadan celebrants is a concrete claim for any halal or Ramadan brief, and it pairs naturally with the Sainsbury's Diwali row for a cultural moments pack.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 24, "id": "vita-coco-ramadan-with-twisted", "results": false, "attachments": ["https://drive.google.com/file/d/1_Efwn3BkS9Uwy02XhoK5S0XOa3l61OaR/view"]}, {"title": "Ocado", "campaign": "Owning Sundays", "brands": ["Twisted"], "date": "2026-01", "audience": "ABC1 families aged 35-54, female skew, time-poor parents who care about quality and value but lack the headspace", "lookingAt": "Ocado owns Sundays on Twisted with fortnightly recipes around batch cooking, healthy eating and seasonality, made with micro creators and tied to cultural moments like Diwali.", "findings": ["No key insights recorded in the directory yet."], "themes": ["Supermarkets and grocery", "Food"], "useThis": "Borrow from the 2025 Ocado row and the Sainsbury's Diwali numbers to build the proof points this response is missing.", "flag": "Insights column is empty.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 25, "id": "ocado-owning-sundays", "results": false, "attachments": ["https://docs.google.com/document/d/18Cm3QW_hfUFOG9yv7DR8txLJawZBz-kkCW3wZFsoJJY/edit?tab=t.0"]}, {"title": "IRN-BRU", "campaign": "The Girder Gauntlet", "brands": ["Twisted", "VT"], "date": "2026-01", "audience": "Resilient Jesters: growing into adult responsibilities but holding on to the fun of younger life, with a carefree attitude to food and drink", "lookingAt": "An IRN-BRU emissary takes on gritty local challenges in England and Wales, from sheep shearing in Ebbw Vale to cod fishing in Grimsby, to earn local respect and make the brand feel alive beyond Scotland.", "findings": ["Hundreds of thousands of people in England and Wales have never tried IRN-BRU, and people tend to avoid food and drink they don't know.", "Once people try it, they're far more likely to come back.", "People engage more with brands that reflect their own culture and heritage.", "Winning the other home nations means meeting them on their terms, down to filming the Wales episode in Welsh."], "themes": ["Local", "Diversity", "Soft drinks", "Challenges", "Cross-brand"], "useThis": "The first-sip trial insight fits any challenger or regional brand expanding into new parts of the UK. There are no hard numbers yet, so pair it with an audience pull before reuse.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 26, "id": "irn-bru-the-girder-gauntlet", "results": false, "attachments": ["https://docs.google.com/document/d/1TKnt0a3nAZVOcC89xpz6PWsgbSs2HWVB-fQ6b0AI4Go/edit?tab=t.0#heading=h.6lwlo46j7ep1"]}, {"title": "Cadbury", "campaign": "Everyday generosity in football", "brands": ["VT", "SPORF"], "date": "2026-01", "audience": "Families and sports fans", "lookingAt": "Cadbury as the officiator of everyday generosity in football, celebrating the selfless acts that keep the game and communities going.", "findings": ["UK adults have 46 minutes less free time a day than in 2020, exactly half a football match (plus a minute of stoppage time)."], "themes": ["World Cup", "Football", "Chocolate", "Charity", "Family", "Generosity"], "useThis": "The 46-minute stat is a neat, shareable time-poverty hook that works well beyond football, for any family, charity or convenience brief.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 27, "id": "cadbury-everyday-generosity-in-football", "results": false, "attachments": ["https://docs.google.com/presentation/d/1aq8Gqlllyb0_MmkiJWYaLuzAgFOjE8lf/edit?slide=id.g3b6c2d7b463_0_2699"]}, {"title": "ASDA", "campaign": "Proactive audience pull", "brands": ["FourNine"], "date": "2026-01", "audience": "FourNine's audience and its relationship with ASDA", "lookingAt": "A proactive look at how FourNine's audience shops with ASDA, with no brief attached yet.", "findings": ["36% of FourNine followers shop at ASDA (index 129) and 10% call it their main supermarket (index 107).", "14% have shopped George at ASDA in the last three months (index 145).", "28% have kids aged 18 or under (index 139), and 47% are aged 20-40 (index 172).", "52% are the main grocery shopper (index 107).", "Top reasons for choosing a supermarket: price 66%, location 61%, quality 61%, range 43%.", "31% say they're more fashionable than most people (index 277) and 33% keep up with trends (index 273).", "15% are on a dating app (index 391) and 28% use social media for flirting and dating (index 569)."], "themes": ["Supermarkets and grocery"], "useThis": "The fashion indexes (273 to 277) are the real story. Pitch FourNine to ASDA as a George and value platform, not just a grocery one.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 28, "id": "asda-proactive-audience-pull", "results": false, "attachments": ["https://docs.google.com/document/d/1SfIA6KXoArKGHetIX_CnTPjLkMqhHQv4Niu7_Dp6_kM/edit?tab=t.0"]}, {"title": "Diablo", "campaign": "The wine for social evenings", "brands": ["Twisted"], "date": "2026-02", "audience": "30-45, urban, design-aware hosts who care about quality but reject stuffy wine culture", "lookingAt": "Building awareness of Diablo in a hosting moment and making it the wine of choice for lively social evenings.", "findings": ["Twisted reaches an estimated 7.5M \"Stylish Rebels\" (30-45 urban hosts) a month, 2.2x the national average.", "75% enjoy cooking for themselves and others, a monthly reach of 22.5M and 1.3x the national average.", "30% tend to choose premium products and services, 1.6x the national average.", "32% will pay more for luxury products, 1.8x the national average.", "Quality matters more to this audience than status."], "themes": ["Premium", "Cocktails", "Alcohol", "Drinks", "Wine", "At home", "Halloween"], "useThis": "The 1.6x premium and 1.8x luxury indexes work for any premium food or drink brief, and \"premium without pretension\" is a tone Twisted can genuinely deliver.", "flag": "One insight says Twisted reaches \"around 7 users a month\" who enjoy hosting dinner parties. A number is missing.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 29, "id": "diablo-the-wine-for-social-evenings", "results": false, "attachments": ["https://docs.google.com/document/d/1Sy7zpll5VsF7kZyVYfZGM8aw3KwF8gD1Yb1YSOLZXfg/edit?tab=t.0"]}, {"title": "Ambrosia", "campaign": "Custard at Wimbledon", "brands": ["Twisted"], "date": "2026-03", "audience": "Young families, 25-44 with kids", "lookingAt": "Tying into Wimbledon to challenge strawberries and cream as the summer snack, with cold custard and fruit combinations aimed at younger audiences.", "findings": ["Twisted parents spend £111 a week on shopping, 1.3x the national average.", "80% prioritise quality and name-brand products.", "They're 2.7x more likely to be swayed by celebrity or influencer endorsements.", "They're 1.8x more likely to buy from well-known brands and 1.3x more likely to buy based on company ethics.", "Premier Foods holds Tier 1 status for farm animal welfare and aims to halve food waste by 2030."], "themes": ["Family", "Supermarkets and grocery", "Brand name", "Millennials", "Health", "Wimbledon", "Fruit", "Custard", "Dessert"], "useThis": "The Twisted parents numbers (£111 a week, 2.7x influencer-led) are reusable for any family grocery brand, not just desserts.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 30, "id": "ambrosia-custard-at-wimbledon", "results": false, "attachments": ["https://docs.google.com/document/d/1aKo25B3TEnqwusp454oNJbs3PgWXpcfWaR_nDzLJpys/edit?tab=t.0"]}, {"title": "Buxton", "campaign": "Audience fit", "brands": ["Twisted", "FourNine", "VT"], "date": "2026-02", "audience": "25-44, ABC1, health-conscious", "lookingAt": "An audience fit check for bottled water, with no campaign idea recorded yet.", "findings": ["VT skews the most ABC1 of any Jungle brand, at 61% (index 103).", "All Jungle brands over-index against the national average for this audience.", "Twisted, VT and FourNine all over-index on drinking bottled water weekly."], "themes": ["Health", "Soft drinks", "Bottled water"], "useThis": "VT at 61% ABC1 is a useful counter to the assumption that Twisted is our only upmarket option.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 31, "id": "buxton-audience-fit", "results": false, "attachments": ["https://docs.google.com/document/d/1A45wcXo84JdLaMA2UEqfhnyC6biKPIfpil7C1KEcNKU/edit?tab=t.0"]}, {"title": "O2 Priority", "campaign": "Season's Eatings", "brands": ["Twisted"], "date": "", "audience": "UK mobile users thinking about switching provider", "lookingAt": "O2 and Twisted give Priority users a once-in-a-lifetime, movie-inspired festive tasting menu cooked by a celebrity chef at a hidden-gem venue.", "findings": ["19% of Twisted followers plan to buy a new phone in the next six months.", "21% are Virgin Media O2 customers.", "45% are experience seekers.", "29% say special offers are a big reason for choosing a network, an over-index.", "58% are ABC1."], "themes": ["Telecoms", "Holidays and festive", "URL to IRL"], "useThis": "Proof Twisted works for non-food brands when the activation is food-led. Use the 45% experience-seeker stat for any telco or loyalty scheme that wants an IRL moment.", "flag": "No date recorded.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 32, "id": "o2-priority-season-s-eatings", "results": false, "attachments": ["https://docs.google.com/document/d/13UclSf9WrLAFq7MIYOmIYF0OXYzoy6APYNvWa4J3Cj0/edit?tab=t.0"]}, {"title": "Heinz Mayo", "campaign": "The summer lived and the summer shown", "brands": ["FourNine", "Twisted"], "date": "2026-05", "audience": "Zillennial mayo buyers, focused on Gen Z 18-34", "lookingAt": "Heinz Mayo wins blind tests with 18-34s but they don't switch from Hellmann's by default. The client wants a cultural breakthrough for H2 2026 that lands \"Seriously Good\".", "findings": ["Together, Twisted and FourNine reach around 8M unduplicated UK 18-34s a month.", "Both audiences skew 73-75% female, matching the core mayo buyer.", "Both over-index on TikTok engagement, brand values and Heinz Mayo awareness.", "They're 1.7x and 1.6x more likely to prefer brands that share their values.", "Twisted owns the eating moment (festivals, BBQs); FourNine owns how it gets shown (photo dumps, close friends stories)."], "themes": ["Mayo", "Summer", "Festivals", "Photo dumps", "Spotify Wrapped"], "useThis": "\"The summer that gets lived and the summer that gets shown\" is a reusable way to pitch Twisted and FourNine together for any challenger brand.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 33, "id": "heinz-mayo-the-summer-lived-and-the-summer-shown", "results": false, "attachments": ["https://docs.google.com/document/d/12fuv_VNHBmuA4pQ6AYLIVUBFgbipMg_cHe2dggcA18o/edit?tab=t.0"]}, {"title": "Kerrygold", "campaign": "Make it Gold", "brands": ["Twisted"], "date": "2026-05", "audience": "ABC1 adults aged 35-54, UK only", "lookingAt": "After sales grew from £36m to £55m in 2025, Kerrygold wants a partner to build culinary credibility for \"Make it Gold\", pushing taste, quality and consideration.", "findings": ["Over 1.5M 35-54s engage with Twisted every month, 1.3x affinity vs the national average.", "76% love experimenting with new recipes and 72% happily pay more for quality.", "34% only buy from brands whose values they trust.", "97% are the main grocery shopper in their household.", "40% have recreated a Twisted recipe at home."], "themes": ["Brand name", "Butter", "Competitor analysis", "Supermarkets and grocery", "Ingredients", "Recipes"], "useThis": "97% main shoppers is the strongest \"we reach buyers, not passengers\" stat in the directory. Check the base before it goes into every grocery pitch.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 34, "id": "kerrygold-make-it-gold", "results": false, "attachments": ["https://docs.google.com/document/d/1DfcN_2KdTvZqEhwbgdoHnYqug5y_fikcGLDoSlib1Mo/edit?tab=t.0"]}, {"title": "Patak's", "campaign": "Audience pull", "brands": ["Twisted"], "date": "2026-08", "audience": "Indian food non-rejecters, ideally under 40", "lookingAt": "An audience pull for Indian cooking sauces and ingredients, with no campaign idea recorded yet.", "findings": ["25% say Indian is their favourite foreign cuisine.", "42% prefer home-cooked meals to eating out.", "27% use social media as a recipe source.", "97% say authenticity matters when choosing a brand."], "themes": ["Indian food", "Ingredients", "Authenticity", "Home cooking"], "useThis": "42% preferring home cooking plus 97% valuing authenticity makes a clean case for any cooking sauce or world food brand.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 35, "id": "patak-s-audience-pull", "results": false, "attachments": ["https://docs.google.com/spreadsheets/d/1Gw5SJMSqQCbNPPCfZYSXgTnyZ6ElrjNwq-dQrm3C0uc/edit?gid=0"]}, {"title": "Kenco", "campaign": "Audience pull", "brands": ["VT", "FourNine"], "date": "2026-08", "audience": "Convenience Upgraders, 35-55", "lookingAt": "Target audience data only, held in the linked sheet.", "findings": ["The directory records this as a target audience pull only, the numbers live in the linked sheet."], "themes": ["Coffee"], "useThis": "Pull two or three headline indexes from the linked sheet into the directory so this row can be reused without opening the source.", "flag": "No insights in the directory itself.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 36, "id": "kenco-audience-pull", "results": false, "attachments": ["https://docs.google.com/spreadsheets/d/1L-fvKEM5qkwQ7GjSqaReePjAXI9xVx0sZQKX2un9tdE/edit?usp=sharing"]}, {"title": "Magnum", "campaign": "Audience pull", "brands": ["VT", "Twisted", "FourNine"], "date": "2026-07", "audience": "Health-conscious snackers, 25-45", "lookingAt": "Target audience data only, held in the linked sheet.", "findings": ["The directory records this as a target audience pull only, the numbers live in the linked sheet."], "themes": ["Ice cream", "Healthy snacks", "Snacks", "Low sugar"], "useThis": "Low-sugar treats sit right between the indulgers and nutrition-watchers in the Jordans row. Bring the headline numbers into the directory so they can be compared.", "flag": "No insights in the directory itself.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 37, "id": "magnum-audience-pull", "results": false, "attachments": ["https://docs.google.com/spreadsheets/d/1SROR5k84SpQ_uSmOtRoOY5-YNWBpKBzefxfeT77154E/edit?gid=0"]}, {"title": "McDonald's", "campaign": "McHeist social review", "brands": [], "date": "2026-06", "audience": "Not specified", "lookingAt": "A write-up of McHeist content on social: what trended and what worked, including LADbible's activity.", "findings": ["The directory only notes that the linked doc covers what trended and what worked for McHeist on social, including with LADbible."], "themes": [], "useThis": "Useful competitor context for QSR pitches. Pull the top three learnings into the directory so they're searchable.", "flag": "No Jungle brand, target audience or stats recorded.", "category": "Food & Drink", "sheetTab": "Food & Drink", "sheetRow": 38, "id": "mcdonald-s-mcheist-social-review", "results": false, "attachments": ["https://docs.google.com/document/d/1lW62CChQ1D4LePtw_ENHaR4yRva_Ds7kn7ftPtSIJzM/edit?usp=sharing"]}, {"title": "Betfred", "campaign": "World Cup second screen", "brands": ["SPORF"], "date": "2026-01", "audience": "Male football fans, 25-44", "lookingAt": "Standing out in a crowded World Cup betting market: embedding Betfred in the second-screen experience for fame, real-time calls to action for conversion, all while reinforcing trust and responsible gambling.", "findings": ["77% of SPORF's audience are excited for the 2026 World Cup.", "70% enjoy betting on football.", "61% plan to place a bet during the 2026 World Cup.", "UK fans are 2x more likely to engage with football content on social during live matches.", "70% are on social before, during and after games."], "themes": ["Football", "World Cup", "Betting and gambling", "Second screen"], "useThis": "70% on social during games sits neatly with Nando's 58% Gen Z dual-screening. Together they make the case for live, in-match content on SPORF.", "category": "Sports and Betting", "sheetTab": "Sports and Betting", "sheetRow": 2, "id": "betfred-world-cup-second-screen", "results": false, "attachments": ["https://docs.google.com/presentation/d/1whFlq_GhaYCl7Z9pX6uqw1lK_iewbSZb/edit?slide=id.g3bf8290805b_1_0"]}, {"title": "Tombola", "campaign": "The Unofficial Games", "brands": ["VT"], "date": "2026-01", "audience": "Fun-loving 25+ \"Spin Masters\" who like light-hearted competition", "lookingAt": "Repositioning Tombola Arcade as fun-first competitive gaming, not just bingo: everyday people take on ridiculous challenges inspired by the Commonwealth Games, with over-the-top sports commentary.", "findings": ["VT followers are 1.9x more likely to already be Tombola customers.", "They're 1.12x more likely to gamble than the national average.", "VT's top gambling post got 2.7x higher engagement.", "Average campaign uplifts: +38% awareness and +18% action intent.", "36% of the audience research or buy products seen on Jungle channels."], "themes": ["Commonwealth Games", "Sport", "Betting and gambling", "Awareness", "Consideration"], "useThis": "The +38% awareness and +18% action intent averages are useful benchmarks for setting realistic uplift expectations in any VT proposal.", "category": "Sports and Betting", "sheetTab": "Sports and Betting", "sheetRow": 3, "id": "tombola-the-unofficial-games", "results": true, "attachments": ["https://docs.google.com/presentation/d/16TDLFpGvDGmk7wtM3r3bKJLoHxpf7-X45P58a-AroWM/edit?slide=id.g3c32d881b7d_0_1423"]}, {"title": "LEGO", "campaign": "LEGO hosts the World Cup", "brands": ["VT", "SPORF"], "date": "2026-01", "audience": "Football fans and families", "lookingAt": "LEGO runs its own World Cup coverage: minifigure pundits voiced by football personalities, a LEGO group chat for build-up, live touchline analysis, and a fan zone mixing kids, adults and minifigures.", "findings": ["1 in 5 VT followers use social media as their main source of news."], "themes": ["Football", "World Cup", "Family", "Kids"], "useThis": "Only one stat so far. Borrow the parent numbers from the LEGO Smart Play row and add SPORF family data to strengthen it.", "category": "Sports and Betting", "sheetTab": "Sports and Betting", "sheetRow": 4, "id": "lego-lego-hosts-the-world-cup", "results": false, "attachments": ["https://docs.google.com/presentation/d/1CGISmwp837IwTNN46Q5QBHOFwfsiHuKB/edit?slide=id.p13"]}, {"title": "O2", "campaign": "Red Roses try something new", "brands": ["Twisted", "FourNine", "VT", "Craft Factory"], "date": "2025-06", "audience": "All Jungle audiences", "lookingAt": "In the build-up to the Women's Rugby World Cup, Red Roses players each try a new hobby or challenge, in social-friendly edits.", "findings": ["No numbers recorded. The rationale is that putting players' real personalities first builds genuine connection.", "Each player's interest is matched to the Jungle brand whose audience shares it, tapping existing communities.", "The goal is turning casual scrollers into Red Roses fans."], "themes": ["Women's sport", "Rugby", "Fragrance", "Sport"], "useThis": "A reusable template for athlete-led content spread across several Jungle brands. Next time, back it with audience numbers for each brand.", "category": "Sports and Betting", "sheetTab": "Sports and Betting", "sheetRow": 5, "id": "o2-red-roses-try-something-new", "results": false, "attachments": ["https://docs.google.com/presentation/d/1lJCOhnOidt5u93Q2aEn6k4yupQukbN7ehAjbBdDF_R8/edit?slide=id.g35fdf3befc8_20_32"]}, {"title": "O2", "campaign": "Roaming at the World Cup", "brands": ["Twisted", "SPORF"], "date": "2026-03", "audience": "ABC1 football fans travelling to the EU and US, with an interest in food", "lookingAt": "Raising awareness of O2 roaming in the US and EU ahead of the World Cup.", "findings": ["27% of Brits have been hit with unexpected roaming charges on holiday, averaging £262 (iD Mobile research).", "Losing signal during a big match means missing its emotional peak, and fans describe being offline as isolating.", "Travelling fans burn through data on live scores, betting apps, group chats and streaming.", "At Euro 2024, several networks charged around £2 a day to roam in Germany, while O2 didn't."], "themes": ["World Cup", "Football", "Travel", "Roaming", "Telecoms", "Sport", "ABC1"], "useThis": "The £262 average bill-shock figure is an externally sourced, pitch-ready hook for any telco or travel money brief around the tournament.", "category": "Sports and Betting", "sheetTab": "Sports and Betting", "sheetRow": 6, "id": "o2-roaming-at-the-world-cup", "results": false, "attachments": ["https://docs.google.com/document/d/1SJLAG4fLmAXz6vDZcNPZLiw5k3MNQHxsFiEfsr0nspA/edit?tab=t.0"]}, {"title": "Premier Inn", "campaign": "Away days", "brands": ["SPORF"], "date": "2026-07", "audience": "Digi-Z Feed Fans (5.7M), Footy Fanatics (9.5M), For the Culture Fans (17.2M) and Stat Sheet Fans", "lookingAt": "A creative route built around fans who travel to away games and already have Premier Inn on their radar.", "findings": ["78% like watching their team in person, a reach of 14.04M.", "74% go to football to socialise, matching the celebratory matchday tone the brief wants.", "86% are interested in football, a reach of 15.48M."], "themes": ["Hospitality", "Football", "Away days", "Sport"], "useThis": "The away-day stats suit any travel, rail or hospitality brand around football, but confirm them with SPORF-specific data first.", "flag": "Uses Jungle-wide brand affinity data as a proxy for SPORF.", "category": "Sports and Betting", "sheetTab": "Sports and Betting", "sheetRow": 7, "id": "premier-inn-away-days", "results": false, "attachments": ["https://docs.google.com/document/d/11I5-bu30FKIngDwByRoRQhZr3xjxizHufWLWtr_zW9E/edit?tab=t.0"]}, {"title": "EA Sports FC 27", "campaign": "Everyone's Playing", "brands": ["SPORF"], "date": "2026-04", "audience": "Football gamers, men 18-44", "lookingAt": "Building anticipation for FC 27 across SPORF so fans know pre-ordering is the way to cash in on rewards.", "findings": ["78% of gamers feel they deserve rewards for being loyal.", "66% say exclusive rewards make them more likely to pre-order.", "73% of Gen Z and millennials are motivated by experience-based rewards like access and collectables."], "themes": ["Gaming", "Football", "Gen Z", "Millennials"], "useThis": "These rewards stats work for any loyalty or pre-order mechanic, from gaming to streaming. Note the original source before reusing them.", "category": "Sports and Betting", "sheetTab": "Sports and Betting", "sheetRow": 8, "id": "ea-sports-fc-27-everyone-s-playing", "results": false, "attachments": ["https://docs.google.com/presentation/d/12CfeCg7oFvZK6LscPgjROd4x5fLmdNRbSDvQ4tjSW7w/edit?slide=id.g3d60bf69603_0_4361"]}, {"title": "Tempcover", "campaign": "Rides To Remember", "brands": ["VT", "Twisted"], "date": "2026-01", "audience": "UK adults with a driving licence, 21-70", "lookingAt": "The unplanned car journeys behind life's best moments, from first dates to midnight snack runs, plus sponsoring an episode of Twisted Explore with an \"Epic Eats Hotspot finder\".", "findings": ["59% of drivers mainly drive for social and leisure.", "20% went to a festival in the last 12 months.", "1.4M people are moving house in 2026.", "650k finish university this year, entering a more flexible life stage.", "The mindset: say yes now, figure it out later."], "themes": ["Insurance", "Drivers"], "useThis": "\"Cars are for moments, not habits\" plus the moving-house and graduate numbers fits any flexible or on-demand product, from insurance to subscriptions.", "category": "Finance", "sheetTab": "Finance", "sheetRow": 2, "id": "tempcover-rides-to-remember", "results": false, "attachments": ["https://docs.google.com/presentation/d/1ficC9abEAlEKGyluuLnmN77OnVjqPluoqjLdUbqsWUU/edit?slide=id.g3b97fa15d1d_1_2150"]}, {"title": "Post Office Pet Insurance", "campaign": "A Day In The Life Of Pets", "brands": ["VT", "Lovimals"], "date": "2026-03", "audience": "First-time pet owners aged 18-35 who treat pets like family but don't prioritise insurance", "lookingAt": "Vlog-style videos following a dog, a cat and a rabbit through their day, each narrated by the pet, with a light-touch message about insuring them.", "findings": ["69% of VT and 72% of Lovimals followers own a pet, vs 52% of the UK.", "Both over-index on dogs, and Lovimals also over-indexes on cats.", "VT followers are 1.4x more likely to have pet insurance already.", "They're 1.5x more likely to be in the market for pet insurance in the next 12 months."], "themes": ["Pets", "Insurance"], "useThis": "72% pet ownership on Lovimals is the anchor stat for any pet brief, whether food, insurance or retail.", "category": "Finance", "sheetTab": "Finance", "sheetRow": 3, "id": "post-office-pet-insurance-a-day-in-the-life-of-pets", "results": false, "attachments": ["https://docs.google.com/presentation/d/1hGBFh2QzvOQvAlXY-iSyNuUOmQOSjIkiXnYB0cuyVU8/edit?slide=id.g3c89463113b_0_94"]}, {"title": "NS&I", "campaign": "Saving stories", "brands": ["VT"], "date": "2025-07", "audience": "Savers aged 30-49", "lookingAt": "Building a pipeline of customers under 48 and teaching them about NS&I through personal stories and trusted voices.", "findings": ["The content suited VT well: three attainable, inspiring stories about saving, each tied to a passion point.", "A large number of stakeholders led to lots of back and forth, including on creator choice.", "The campaign ran two months longer than planned because of rounds of feedback."], "themes": ["Saving", "Banking", "Investment", "Personal finance"], "useThis": "More a learnings row than a proof point. Use it to agree approval timelines up front with financial services clients and build in extra review rounds.", "category": "Finance", "sheetTab": "Finance", "sheetRow": 4, "id": "ns-i-saving-stories", "results": false, "attachments": ["https://docs.google.com/presentation/d/1Dff2fJFGohIFbGg_oiR114ZQtEVjnzVxZeui8yI3Ag0/edit?slide=id.g367d2028e6d_1_490"]}, {"title": "Lloyds Bank", "campaign": "Upfront Interest savings", "brands": ["VT", "Twisted", "FourNine"], "date": "2026-08", "audience": "Mass affluent, and fixed term account openers", "lookingAt": "A category awareness campaign for Lloyds' new Upfront Interest savings product, live from w/c 5 October for 6 to 8 weeks at £300k, alongside a wider campaign across OOH, social and audio.", "findings": ["Mass affluent are the confident, growth-oriented audience.", "Fixed term account openers are the reassurance-first audience.", "That contrast shows up consistently across finance habits, demographics and social behaviour (detail in the linked doc)."], "themes": ["Banking", "Saving", "Personal finance"], "useThis": "Confident vs reassurance-first is a clear way to split any savings or investment brief with two audiences into two creative routes.", "category": "Finance", "sheetTab": "Finance", "sheetRow": 5, "id": "lloyds-bank-upfront-interest-savings", "results": false, "attachments": ["https://docs.google.com/document/d/1kBPaZZbXcuzJo0KTeO3h0DWS8iYVlcrFo8Ih4gCkSZw/edit?tab=t.0"]}, {"title": "Colgate", "campaign": "Wellness starts at the mouth", "brands": ["VT"], "date": "2025-04", "audience": "25-45 year olds", "lookingAt": "Feeds are full of nutrition content, but almost nobody talks about protecting the place it all starts: the mouth.", "findings": ["People scrutinise everything they put in their bodies, but toothpaste is an afterthought.", "Content about how teeth look is popular, content about oral health isn't.", "Using a basic toothpaste gives bacteria a free pass, even for people trying hard to be healthy."], "themes": ["Mouth health", "Toothpaste", "Health", "Vox pops", "Nutrition"], "useThis": "No numbers, but the \"wellness stops at the mouth\" tension pairs well with FourNine's oral care indexes in the Fresh Breath row for any oral care pitch.", "category": "Wellness, Lifestyle and Beauty", "sheetTab": "Wellness Lifestyle and Beauty", "sheetRow": 4, "id": "colgate-wellness-starts-at-the-mouth", "results": false, "attachments": ["https://docs.google.com/presentation/d/1rybBDOU48ACZa4C73VSaYNpq0TojUnZP2Lc_eOdiSKA/edit?slide=id.g34bbb33eca9_2_323"]}, {"title": "Essity", "campaign": "Shameless Revolution", "brands": ["VT", "FourNine"], "date": "2024-09", "audience": "Women aged 18-25", "lookingAt": "FourNine's New Year Revolution campaign with Bodyform and Tena: a year-long push to normalise talking about periods and incontinence, reclaiming \"shameless\" as a badge of honour.", "findings": ["Stigma around periods and incontinence comes from generations of silence and shame.", "It often starts with \"The Talk\", which some people never get and others find embarrassing.", "That shame gets carried into adulthood and passed on to the next generation."], "themes": ["Periods", "Women-focused", "Shameless", "Empowerment"], "useThis": "A strong insight chain for any taboo health category. The \"break the cycle across generations\" structure is reusable.", "category": "Wellness, Lifestyle and Beauty", "sheetTab": "Wellness Lifestyle and Beauty", "sheetRow": 5, "id": "essity-shameless-revolution", "results": false, "attachments": ["https://docs.google.com/presentation/d/1oy7JO_d9s2PsIxk-6osF_rElk9Z9G8kK-e3_KRJiQ6U/edit?slide=id.g30466c65bb0_1_75"]}, {"title": "Isopure", "campaign": "Less Is More", "brands": ["Retainer"], "date": "2025-10", "audience": "The Active Striver: 5M women aged 30-45 with busy lives who care about looking and feeling their best", "lookingAt": "A retainer bringing \"Less Is More\" to life through creators picked with Pollinate and JungleIQ, joined up with PR, and measured over the short and long term.", "findings": ["Impressions came in 9% above guarantee.", "Awareness video impressions reached 2.8M against 12M planned.", "Brand frequency was 12.5 against 14.5 planned.", "16k clicks in the Amazon consideration phase against 3.9k planned, about 4x."], "themes": ["Fitness", "Supplements", "Creators and influencers"], "useThis": "A mixed result worth telling honestly: clicks beat plan by about 4x while awareness video fell short, a good argument for weighting retainer budgets towards consideration.", "category": "Wellness, Lifestyle and Beauty", "sheetTab": "Wellness Lifestyle and Beauty", "sheetRow": 6, "id": "isopure-less-is-more", "results": true, "attachments": ["https://docs.google.com/presentation/d/1hZPkSjh-9L2KKj6chBudy0_qg9KLFx13/edit?slide=id.p1"]}, {"title": "Max Factor", "campaign": "Tea at Four", "brands": ["FourNine"], "date": "2025-06", "audience": "Women aged 18-25", "lookingAt": "FourNine as the home of unfiltered conversations, with its Tea at Four beauty show as the vehicle.", "findings": ["Tea at Four is the UK's number one beauty show.", "It gets 5x more swipe-ups than click-throughs on other social platforms.", "63% of subscribers come back at least twice a week.", "20k product screenshots a month.", "The audience is 2.5x more likely to be aware of Max Factor, but only 5% are current customers."], "themes": ["Beauty", "Makeup", "Women-focused"], "useThis": "2.5x awareness but only 5% customers is a textbook conversion pitch for any beauty brand that's known but not bought.", "flag": "The sheet lists \"102 mins watched in 2025\", which looks like a missing unit, so it's left out here.", "category": "Wellness, Lifestyle and Beauty", "sheetTab": "Wellness Lifestyle and Beauty", "sheetRow": 7, "id": "max-factor-tea-at-four", "results": false, "attachments": ["https://docs.google.com/presentation/d/1dv9ajuZLhdmlx_vlmSTAg-lYzKXJOgmpspIE0eNTyrY/edit?slide=id.g3613b33a895_0_1079"]}, {"title": "Sol de Janeiro", "campaign": "Carnanaval", "brands": ["FourNine"], "date": "2025-10", "audience": "Savvy Beauty Shoppers, plus Want It Alls (women 18-40), Champagne Chasers (25-34) and Joyful Beauty Seekers (41-55)", "lookingAt": "Rose is seen as a granny scent. The idea flips that with grandmother and granddaughter content, timed to Rio Carnaval and named after its Brazilian spelling.", "findings": ["FourNine reaches 788k UK Savvy Beauty Shoppers, 8.5M Want It Alls, 1.4M Champagne Chasers and 1.3M Joyful Beauty Seekers, all over-indexing.", "72% are in the market for new beauty products within a month, and 62% bought in the last three months.", "That adds up to 6.1M monthly beauty reach.", "41% have researched or bought a product featured on FourNine.", "Emotional creative outperforms rational work for long-term brand growth, and granfluencer content drives strong engagement."], "themes": ["Skincare", "Women-focused", "Tanning", "Fragrance", "Carnaval", "Beauty"], "useThis": "72% in market within a month is the strongest purchase-readiness number for beauty in the directory.", "category": "Wellness, Lifestyle and Beauty", "sheetTab": "Wellness Lifestyle and Beauty", "sheetRow": 8, "id": "sol-de-janeiro-carnanaval", "results": false, "attachments": ["https://docs.google.com/presentation/d/1rS_JwWxma60rlNedGAaA24HsKRjuP9VW/edit?slide=id.g394caf0b57c_0_1520"]}, {"title": "Fresh Breath (TBCo)", "campaign": "Fresh Breath Reset", "brands": ["FourNine"], "date": "2026-08", "audience": "18-34s, bullseye 25-34. Gen Z want brands native to social, millennials want credible proof", "lookingAt": "Thought starters built on trial: sachets co-branded with coffee chains and boutique gyms, Fresh Breath Booths at stations and festivals, QR coupons to retailers, and creator-hosted sampling.", "findings": ["FourNine over-indexes on using mouthwash (index 124) and brushing twice a day (index 120).", "Toothpaste choices lean towards whitening, tartar control and toothache relief.", "Self-reported dental issues like sensitivity and gum problems are also higher.", "Broader oral hygiene questions show parity or slight under-index, likely noise from small 25-34 bases."], "themes": ["Mouth health", "Toothpaste", "Health", "Beauty", "Expert testimonials", "Creators and influencers", "Mouthwash"], "useThis": "Pair with the Colgate row: FourNine's audience has a problem-solving oral care routine, so product proof and expert voices will land better than aspiration alone.", "category": "Wellness, Lifestyle and Beauty", "sheetTab": "Wellness Lifestyle and Beauty", "sheetRow": 9, "id": "fresh-breath-tbco-fresh-breath-reset", "results": false, "attachments": ["https://docs.google.com/spreadsheets/d/1nwCCjwkcLHzbkp-BZfvqY2-sP5vbPuARoPGNs7Dk-QI/edit?gid=0"]}, {"title": "Clarins", "campaign": "The Multitude Effect", "brands": ["FourNine"], "date": "2026-07", "audience": "Double Serum buyers who don't buy the eye serum (30-55, core 35-45), plus younger face care fans who expect science-backed results", "lookingAt": "A six-part video podcast where the host and a guest dig into the mental load women carry and the many roles they juggle.", "findings": ["FourNine's audience maps well onto Clarins' 30+ core.", "1.5M YouTube views and 1.2bn Facebook views, ahead of Hearst UK and The Guardian on YouTube.", "160M TikTok views, second only to Condé Nast in the competitor set.", "21.5M Facebook engagements (a 27.8% share) and 8.9M on TikTok, ahead of Hearst UK and The Guardian."], "themes": ["Older audiences", "Millennials", "Medical research", "Skincare"], "useThis": "The benchmark against Condé Nast, Hearst and The Guardian is reusable for any premium beauty pitch where FourNine has to hold its own against glossy publishers.", "category": "Wellness, Lifestyle and Beauty", "sheetTab": "Wellness Lifestyle and Beauty", "sheetRow": 10, "id": "clarins-the-multitude-effect", "results": false, "attachments": ["https://docs.google.com/document/d/1Khnv8bA_rZaGiWa3RgzldVd_dgm9qJl9Crqpb68rEVE/edit?tab=t.0"]}, {"title": "Married at First Sight UK", "campaign": "Super-fan evening", "brands": ["FourNine"], "date": "2025-07", "audience": "18-34 romance reality fans and MAFS UK viewers", "lookingAt": "Former MAFS stars Ella Morgan and Kieran Chapman host an evening for super fans: rewatching iconic moments, ranking contestants and teasing the new series.", "findings": ["Since the start of 2024 FourNine has posted 60+ reality TV videos, with 8M+ views.", "Those posts sparked around 340k engagements.", "FourNine's podcast with Ella Morgan was its best performing episode ever."], "themes": ["Reality TV", "TV"], "useThis": "8M views from around 60 posts is solid reality TV proof for FourNine. Reuse it for dating shows, streaming launches or reality-adjacent brands.", "category": "Entertainment", "sheetTab": "Entertainment", "sheetRow": 2, "id": "married-at-first-sight-uk-super-fan-evening", "results": false, "attachments": ["https://docs.google.com/presentation/d/167VkrQkxI7v58kQJdZsjYgagDrpDe8MIJTCymt7aQRo/edit?slide=id.g36e595fdba9_0_2371"]}, {"title": "The Jury", "campaign": "Series 2", "brands": ["VT"], "date": "2025-06", "audience": "VT's TV and film fans", "lookingAt": "Strangers judge whether a defendant is guilty of a social crime like catfishing. The guilty face punishments, then the twist reveals whether the jury got it right.", "findings": ["VT's community is 2x more likely than average to watch a new TV show when it's released.", "40% get TV and film recommendations from social."], "themes": ["TV", "Film", "Media", "Opening weekend"], "useThis": "2x watch-on-release is the key opening-weekend argument for any TV or film launch on VT.", "category": "Entertainment", "sheetTab": "Entertainment", "sheetRow": 3, "id": "the-jury-series-2", "results": false, "attachments": ["https://docs.google.com/presentation/d/1h9a6TBYfeeD_lLwfVnSAxdiRkTM0QWFne7pXv25JPkA/edit?slide=id.g36a2562f578_0_325"]}, {"title": "Disney+", "campaign": "She Means Business (All's Fair)", "brands": ["FourNine", "VT"], "date": "2025-09", "audience": "Women aged 18-24", "lookingAt": "A FourNine series inspired by the women of All's Fair, spotlighting women breaking barriers in male-dominated fields, supported on VT.", "findings": ["Every Jungle brand over-indexes on having a paid Disney+ account, VT most at 1.9x.", "VT followers are 2.3x more likely to share accounts with other people.", "39% of Twisted and VT followers use social to find new TV shows, an over-index.", "Crossover with the LADbible website audience is low (YouGov can't compare social pages)."], "themes": ["Streaming", "Women-focused", "TV"], "useThis": "2.3x account sharing is a sharp angle for any streaming client trying to turn shared logins into paid accounts.", "category": "Entertainment", "sheetTab": "Entertainment", "sheetRow": 4, "id": "disney-she-means-business-all-s-fair", "results": false, "attachments": ["https://docs.google.com/document/d/11Lt90MfPzCnUHgp7u3qjOwjDusMjFIw9AsZmH34siy0/edit?tab=t.0"]}, {"title": "Warner Bros", "campaign": "They Will Kill You release", "brands": ["FourNine", "VT"], "date": "2026-03", "audience": "Action, adventure, sci-fi and superhero fans", "lookingAt": "High-impact carousels using Warner Bros assets: a highlights post, a trailer post, then actor profiles to build recognition before release.", "findings": ["FourNine followers are 1.5x and VT followers 1.6x more likely to enjoy superhero TV.", "44% of both audiences watch action and adventure TV, 1.15x the national average.", "63% of FourNine followers watch action films (1.04x), while VT is in line with average at 60%.", "Sci-fi films: 43% of FourNine (1.1x) and 37% of VT (1.02x).", "Adventure films: VT over-indexes at 51% (1.1x), FourNine under-indexes (0.9x)."], "themes": ["Superhero", "Sci-fi", "Film", "Opening weekend"], "useThis": "Superhero content is where both brands clearly over-index. General action is close to average, so lead with the superhero angle.", "flag": "Row is titled \"Supergirl x Warner Bros\" but the summary is about They Will Kill You.", "category": "Entertainment", "sheetTab": "Entertainment", "sheetRow": 5, "id": "warner-bros-they-will-kill-you-release", "results": false, "attachments": ["https://docs.google.com/document/d/120LIZiHhVkfI66-CNzPZvS58HacrtftQoiHcTkTj5Ww/edit?tab=t.0"]}, {"title": "Sky", "campaign": "Choosing between War, Sweetpea and The Good Daughter", "brands": ["FourNine"], "date": "2026-04", "audience": "UK drama and thriller fans", "lookingAt": "A £500k brief: deciding which of three Sky shows gives Jungle the best right to win.", "findings": ["War is the strongest fit: FourNine leads on thriller fans and glamour seekers, and Twisted over-indexes in almost every category too.", "Sweetpea is slightly weaker, mostly because there's little season one data, but audiences love the genre and know the cast.", "The Good Daughter is the weakest fit, with little data and a genre that doesn't match our audiences.", "FourNine and Twisted come out as the winning platforms across all three."], "themes": ["Thriller", "Drama", "Horror"], "useThis": "A good model for comparing several titles in one brief. Twisted over-indexing for a thriller is worth testing again on other drama launches.", "category": "Entertainment", "sheetTab": "Entertainment", "sheetRow": 6, "id": "sky-choosing-between-war-sweetpea-and-the-good-daughter", "results": false, "attachments": ["https://docs.google.com/document/d/1WDN6pe9guAZ6-iKuul0vKfdsfSEx7vf06heHYgT35MM/edit?tab=t.0"]}, {"title": "Practical Magic 2", "campaign": "The girls' night out", "brands": ["VT", "FourNine"], "date": "2026-06", "audience": "Women 35+ who love fantasy, romance and drama, plus women 16-34", "lookingAt": "Making Practical Magic 2 a must-see girls' night out and building excitement among fans.", "findings": ["FourNine skews towards the primary audience, with nearly 2.9M women 35+ in reach.", "FourNine's Then vs Now sisterhood carousel and a Sandra Bullock CinemaCon post both beat normal performance.", "VT reaches 16-34s at a 1.8x index, around 2.95M people.", "Instagram gives FourNine its best engagement on nostalgia content, and TikTok gives VT the raw views."], "themes": ["Fantasy", "Romance", "Drama", "TV", "Sandra Bullock", "Film"], "useThis": "FourNine for depth and VT for scale is a clean pairing for any female-skewed film release.", "category": "Entertainment", "sheetTab": "Entertainment", "sheetRow": 7, "id": "practical-magic-2-the-girls-night-out", "results": false, "attachments": ["https://docs.google.com/document/d/150e8TJJA5lEXswhJNKpenRVc8P9s9ScMumVDW9cVMDo/edit?tab=t.0"]}, {"title": "VAWG campaign", "campaign": "Size Matters", "brands": ["VT", "FourNine"], "date": "2025-09", "audience": "Men aged 18-24", "lookingAt": "Violence against women and girls is a national emergency, yet over half the UK think it's no big deal. Calling out the small acts before they grow, via a guerrilla stunt and an edutainment sketch.", "findings": ["76% of people don't trust politicians to tackle VAWG, and 50% don't trust the police (Violence Against Women Coalition, 2024).", "63% think awareness of VAWG is rising (Ipsos).", "But 55% don't feel comfortable stepping in if they see it."], "themes": ["Education", "VAWG", "Social issues", "Government"], "useThis": "The gap between rising awareness (63%) and discomfort acting (55%) is a strong structure for any behaviour change or government brief.", "category": "Other", "sheetTab": "Other", "sheetRow": 2, "id": "vawg-campaign-size-matters", "results": false, "attachments": ["https://docs.google.com/document/d/13QT4DccHV1qgaUBJS-j46KYf5fUSIDKH8PUccx96qjE/edit?tab=t.0"]}, {"title": "MINI", "campaign": "World Cup", "brands": ["SPORF", "FourNine", "VT", "Twisted"], "date": "2026-03", "audience": "25-38, mid-propensity, aware of MINI but not considering one", "lookingAt": "An audience fit check for a World Cup campaign, with no idea recorded yet.", "findings": ["Every Jungle brand reaches 500k+ of the target audience each month.", "Lots of our audience know MINI but aren't considering buying one.", "All brands over-index on planning to buy a car in the next 12 months."], "themes": ["World Cup", "Cars", "Aware but not considering"], "useThis": "The car-buying intent over-index across every brand is the reusable bit for any automotive brief.", "category": "Other", "sheetTab": "Other", "sheetRow": 3, "id": "mini-world-cup", "results": false, "attachments": ["https://docs.google.com/document/d/19SkcJ6885sgmeqPRvpdjOvTXvWQhBHNwdJBZeLUUx0A/edit?tab=t.0"]}, {"title": "LEGO", "campaign": "Smart Play", "brands": ["Twisted", "VT", "FourNine"], "date": "2026-08", "audience": "Parents of children aged 6-12", "lookingAt": "Parent insight for a Christmas toys brief, with no idea recorded yet.", "findings": ["87% of parents think hands-on projects with their kids would strengthen their bond, and teach patience (63%), creativity (59%) and teamwork (56%).", "A \"cozy culture\" trend has families choosing tech-free toys as screen-free space for creativity and connection.", "78% of parents want more toys that build skills like creativity and problem-solving.", "81% of parents in 2025 planned to add a toy or game for themselves to their holiday list, up from 72% a year earlier."], "themes": ["Christmas", "Toys", "Hands-on", "Screen time", "Parents", "Kids"], "useThis": "Useful for any family or Christmas gifting brief, and the 81% toys-for-themselves stat opens up adult buyers too.", "flag": "Last insight is cut off mid-sentence and sources aren't recorded.", "category": "Other", "sheetTab": "Other", "sheetRow": 4, "id": "lego-smart-play", "results": false, "attachments": ["https://docs.google.com/spreadsheets/d/14oVcRwX8hgaZjz-XN3E566vg1a68t-3qQIDD_PJ7o7M/edit?gid=0"]}, {"title": "DHSC", "campaign": "Care recruitment audience pull", "brands": ["Twisted", "VT", "FourNine"], "date": "2026-08", "audience": "England, 18-39, C1C2, caring", "lookingAt": "Target audience data only, for a health and social care recruitment brief.", "findings": ["The directory records this as target audience pulls only, the numbers live in the linked sheet."], "themes": ["Recruitment", "Health and social care", "Government"], "useThis": "Pair with the VAWG row, our other government brief, and bring a few headline numbers across so both can support public sector pitches.", "flag": "No insights in the directory itself.", "category": "Other", "sheetTab": "Other", "sheetRow": 5, "id": "dhsc-care-recruitment-audience-pull", "results": false, "attachments": ["https://docs.google.com/spreadsheets/d/1zAHVSV0ttVgEUnkwY8B6QpsF-Jv-P9En2DzOZvKXsmU/edit?usp=sharing"]}]</script>
+<script type="application/json" id="blsdata">{"studies": [{"brand": "Royal Navy", "year": 2024, "partner": "ThisThat", "hardCost": "£6,400", "results": {"Ad Awareness": 25.0, "Action Intent": 10.0, "Consideration": 15.0, "Agreeability": 11.0, "Believability": 26.0, "Curiosity": 9.0}, "link": "https://docs.google.com/presentation/d/1EyHnpGftLzH_COiq8YlbF7od15-R7c-8CFKXqm0UHuQ/edit?slide=id.g328107ab51e_0_0#slide=id.g328107ab51e_0_0", "notes": [], "row": 0, "rtb": null, "flag": null, "providerGroup": "ThisThat"}, {"brand": "Sainsburys", "year": 2024, "partner": "ThisThat", "hardCost": "£6,400", "results": {"Ad Awareness": -1.0, "Consideration": 6.0, "Agreeability": 2.0, "Association": 14.0}, "link": "https://docs.google.com/presentation/d/1vJm7V5THlFQbbwT18-Pi6rDBr5Kf8iHccPc87wc4iIU/edit?usp=drive_web&ouid=118231345782934536712", "notes": [], "row": 1, "rtb": "Sainsbury's: Diwali, year two", "flag": null, "providerGroup": "ThisThat"}, {"brand": "Pinterest", "year": 2024, "partner": "Meta", "hardCost": "£0", "results": {"Ad Awareness": 3.4, "Brand Favourability": 0.3, "Action Intent": -2.1}, "link": "https://docs.google.com/presentation/d/1duWy3qeYn7-5w-GbrjdUI9fh8X5CmoIe-Bb8F8AbW8c/edit?usp=drive_web&ouid=118231345782934536712", "notes": [], "row": 2, "rtb": null, "flag": null, "providerGroup": "Meta"}, {"brand": "Pepsi Max", "year": 2024, "partner": "Meta", "hardCost": "£0", "results": {"Ad Awareness": 3.9, "Brand Favourability": -2.9, "Action Intent": 1.2}, "link": "https://docs.google.com/presentation/d/1BWpItvwTeJSuip_UOmjhhCxVs7liEDzh/edit?slide=id.g3204a6547e8_0_0#slide=id.g3204a6547e8_0_0", "notes": [], "row": 3, "rtb": null, "flag": null, "providerGroup": "Meta"}, {"brand": "Inch's", "year": 2024, "partner": "Meta", "hardCost": "£0", "results": {"Ad Awareness": 13.4, "Standard Awareness": 1.9, "Recommendation": -3.4}, "link": "https://docs.google.com/presentation/d/1nhxr5tQFZJMtZeT_yL0t0akmsSVF-YJp6BYeFejXn9g/edit", "notes": [], "row": 4, "rtb": "Inch's: Supper clubs and reactive twists", "flag": null, "providerGroup": "Meta"}, {"brand": "Boursin", "year": 2024, "partner": "Meta", "hardCost": "£0", "results": {"Ad Awareness": 5.9, "Familiarity": 0.0, "Action Intent": 0.0, "Message recall": 2.9}, "link": "https://docs.google.com/presentation/d/1t2ifGOIlZoLxFRSZlSP70ipTnTnJbb5Y/edit?slide=id.p1#slide=id.p1", "notes": [], "row": 5, "rtb": "Boursin: Christmas showstoppers", "flag": "Ad Awareness is from the tracker. Familiarity, Action Intent and Message recall are read from slides 19-21 of the linked deck (Brand Study section), not from the tracker sheet. Familiarity and Action Intent were reported as flat with no lift. Message recall is the deck's \"Ad Recall\", +2.9 percentage points with over 95% statistical significance, not a plain percentage like the tracker's other studies. The deck also reports favourability came back without statistically significant results, so it isn't included here.", "providerGroup": "Meta"}, {"brand": "Canowater (brand direct)", "year": 2024, "partner": "Meta", "hardCost": "£0", "results": {"Ad Awareness": 5.1, "Brand Favourability": -4.9}, "link": "https://docs.google.com/presentation/d/1eZ5eDH3ILxfHM2Feysx1N__zKp0-yEYU8aRSCsAI34s/edit", "notes": [], "row": 6, "rtb": null, "flag": null, "providerGroup": "Meta"}, {"brand": "Doritos", "year": 2024, "partner": "ThisThat", "hardCost": "£6,400", "results": {"Action Intent": 85.0, "Consideration": 0.0, "Agreeability": 43.0}, "link": "https://docs.google.com/presentation/d/1V3IG6Yei9Y4ubC-eoTrnM52dTpZ_3AeIBpM4r9GS5sM/edit", "notes": [], "row": 7, "rtb": "Doritos: #BYOD: Bring Your Own Doritos", "flag": null, "providerGroup": "ThisThat"}, {"brand": "Symprove (our own)", "year": 2024, "partner": "ThisThat", "hardCost": "£6,400", "results": {"Ad Awareness": 220.0, "Familiarity": 312.0, "Consideration": 26.0, "Curiosity": 15.0}, "link": "https://docs.google.com/presentation/d/1DFGQnq9ly8oggzYar73oqmQqZyfVCT1bfofsocYKWjs/edit?slide=id.g37c9c9869a5_0_70#slide=id.g37c9c9869a5_0_70", "notes": [], "row": 8, "rtb": null, "flag": null, "providerGroup": "ThisThat"}, {"brand": "NS&I", "year": 2025, "partner": "ThisThat Bundle Agreement", "hardCost": "£1,800", "results": {"Ad Awareness": 17.0, "Action Intent": 20.0, "Curiosity": 3.8, "Relevance": 33.0, "Message recall": 269.0}, "link": "https://docs.google.com/presentation/d/1Dff2fJFGohIFbGg_oiR114ZQtEVjnzVxZeui8yI3Ag0/edit", "notes": [], "row": 9, "rtb": "NS&I: Saving stories", "flag": null, "providerGroup": "ThisThat"}, {"brand": "GoodFellas", "year": 2025, "partner": "ThisThat Bundle Agreement", "hardCost": "£1,800", "results": {"Ad Awareness": 6.2, "Action Intent": 9.7, "Message recall": -3.1, "Affinity": 4.6, "Perception Shift": 4.3}, "link": "https://docs.google.com/presentation/d/1_90qQqrkGxQa5Bw492D4FFnGBMsz2SvNhEVfUZ2IUwI/edit?slide=id.g304ddd9958f_0_22#slide=id.g304ddd9958f_0_22", "notes": [], "row": 10, "rtb": "Goodfellas: Pizza game show", "flag": null, "providerGroup": "ThisThat"}, {"brand": "Inch's", "year": 2025, "partner": "ThisThat Bundle Agreement", "hardCost": "£1,800", "results": {"Ad Awareness": 12.0, "Action Intent": 7.0, "Relevance": 3.0, "Message recall": 42.0, "Perception Shift": 6.0}, "link": "https://docs.google.com/presentation/d/1MuAEVsKPGDeBUoZV0ngu8XQkxrE1vgAjWQj5vg6JbOY/edit?usp=drive_web&ouid=118231345782934536712", "notes": [], "row": 11, "rtb": "Inch's: Supper clubs and reactive twists", "flag": null, "providerGroup": "ThisThat"}, {"brand": "Philips", "year": 2025, "partner": "ThisThat Bundle Agreement", "hardCost": "£1,800", "results": {"Ad Awareness": -4.0, "Action Intent": -24.0, "Message Association": 28.0, "Consideration": 3.0, "Relevance": -9.0}, "link": "https://docs.google.com/presentation/d/1uZTggPwVzzdTHw3t_JKAjFRHu2EsIRW3ZEPI77-xCU8/edit?slide=id.p#slide=id.p", "notes": [], "row": 12, "rtb": null, "flag": null, "providerGroup": "ThisThat"}, {"brand": "Itsu", "year": 2025, "partner": "ThisThat Bundle Agreement", "hardCost": "£1,800", "results": {"Ad Awareness": 1.0, "Action Intent": 50.0, "Consideration": 154.0, "Agreeability": 26.0, "Message recall": 41.0}, "link": "https://docs.google.com/presentation/d/1qiQPcXU82cU6W-yhu3PzMe9paJAaPKDNeDKmqaBcIs4/edit?usp=drive_web&ouid=118231345782934536712", "notes": [], "row": 13, "rtb": "Itsu: Evening menu creator push", "flag": null, "providerGroup": "ThisThat"}, {"brand": "Skittles", "year": 2025, "partner": "ThisThat Bundle Agreement", "hardCost": "£1,800", "results": {"Message Association": 27.0, "Consideration": -4.0, "Recommendation": 10.0, "Agreeability": 21.0, "Message recall": 82.0}, "link": "https://docs.google.com/presentation/d/1N-nNPIHsTJmwKmcd4befPZmxK-Vp2Gj5CtXhoSdBMP8/edit", "notes": [], "row": 14, "rtb": "Skittles: Skittles Chosen Family", "flag": null, "providerGroup": "ThisThat"}, {"brand": "Sainsburys Diwali", "year": 2025, "partner": "Bilendi", "hardCost": "", "results": {"Ad Awareness": 32.0, "Message Association": 16.0, "Consideration": 6.0, "Recommendation": 41.0, "Agreeability": 14.0}, "link": "https://docs.google.com/presentation/d/1c1LR7HxaUpdJzzJh0h48Dd_zjnwObk9u0f10ohvJA2g/edit", "notes": [], "row": 15, "rtb": "Sainsbury's: Diwali, year two", "flag": null, "providerGroup": "Bilendi"}, {"brand": "Disney+ Paradise S2", "year": 2026, "partner": "ThisThat Bundle Agreement", "hardCost": "£1,800", "results": {"Ad Awareness": 53.0, "Action Intent": 57.0, "Association": 184.0, "Relevance": 15.0, "Affinity": 27.0}, "link": "https://docs.google.com/presentation/d/1rpbOE1nrSuyGlevedwwn4ez21V2Hfr-pFbB3hcGq2fQ/edit", "notes": [], "row": 16, "rtb": null, "flag": null, "providerGroup": "ThisThat"}, {"brand": "Live Kindly", "year": 2026, "partner": "ThisThat Bundle Agreement", "hardCost": "£1,800", "results": {"Ad Awareness": 21.0, "Message Association": 28.0, "Consideration": 73.0, "Agreeability": -0.27, "Affinity": -5.3}, "link": "https://docs.google.com/presentation/d/1gBpxtyv46ywtd1wF7EeLNiaRmo8MHqNrZcjf5GdJEEo/edit?usp=drive_web&ouid=118231345782934536712", "notes": [], "row": 17, "rtb": "LiveKindly: Like a Boss", "flag": null, "providerGroup": "ThisThat"}, {"brand": "UWCL", "year": 2026, "partner": "Bilendi", "hardCost": "£1,800", "results": {"Ad Awareness": 10.0, "Action Intent": 20.0, "Association": 500.0}, "link": "https://docs.google.com/presentation/d/1njxfepJvEz-Gn9oXXZCnqRQX5wJUqK27rHzh5NKZ_PY/edit?slide=id.g3e4a6e5290b_0_175#slide=id.g3e4a6e5290b_0_175", "notes": [], "row": 18, "rtb": null, "flag": null, "providerGroup": "Bilendi"}, {"brand": "The Bear S2", "year": 2026, "partner": "Bilendi", "hardCost": "£1,800", "results": {"Ad Awareness": 5.0, "Action Intent": 0.0, "Association": 24.0}, "link": "https://docs.google.com/presentation/d/1lZ0ej8x9nKSRk9lZ2RumHgyHeEH8EsVDrmBCzz9JSFU/edit?slide=id.g3d8412763f2_0_2379#slide=id.g3d8412763f2_0_2379", "notes": [], "row": 19, "rtb": null, "flag": null, "providerGroup": "Bilendi"}, {"brand": "Walkers", "year": 2026, "partner": "Bilendi", "hardCost": "£1,800", "results": {"Ad Awareness": 2.7, "Consideration": 7.4, "Association": 25.8}, "link": "https://docs.google.com/presentation/d/19KoCPmHTQt_IPb6NZaanS6ui7h37fpUJwQwkxJTwK-Y/edit?slide=id.g3f40052e515_1_42#slide=id.g3f40052e515_1_42", "notes": [], "row": 20, "rtb": null, "flag": null, "providerGroup": "Bilendi"}, {"brand": "Carling", "year": 2026, "partner": "Bilendi", "hardCost": "£1,800", "results": {"Ad Awareness": 11.8, "Consideration": 20.7, "Association": 32.4}, "link": "https://docs.google.com/presentation/d/1Q0BNYuhKgQGeeeYKLs4AZp8xt8-TWaRj7JgZ033WX_Q/edit?slide=id.SLIDES_API1709955491_0#slide=id.SLIDES_API1709955491_0", "notes": [], "row": 21, "rtb": null, "flag": null, "providerGroup": "Bilendi"}, {"brand": "Royal Navy", "year": 2026, "partner": "Bilendi", "hardCost": "£1,800", "results": {"Ad Awareness": 15.0, "Action Intent": 6.0, "Consideration": 27.0, "Curiosity": 13.0, "Association": 11.0}, "link": "https://docs.google.com/presentation/d/1f858jYY3UNg8uMnTLMYBPSc1CsRbOu2-JZm-vAF3pqs/edit?slide=id.g3db5ba975ef_0_5#slide=id.g3db5ba975ef_0_5", "notes": [], "row": 22, "rtb": null, "flag": null, "providerGroup": "Bilendi"}], "benchmark": {"Ad Awareness": 7.0, "Consideration": 6.0, "Action Intent": 7.0}, "overallBenchmark": {"Ad Awareness": 7.0, "Standard Awareness": 7.0, "Brand Favourability": 7.0, "Abstract Favourability": 7.0, "Message recall": 13.0, "Action Intent": 7.0, "Agreeability": 7.0, "Association": 4.0, "Believability": 11.0, "Consideration": 6.0, "Curiosity": 4.0, "Familiarity": 14.0, "Perception Shift": 6.0, "Recommendation": 10.0, "Relevance": 8.0, "Affinity": 1.0}, "trackerUrl": "https://docs.google.com/spreadsheets/d/1ORWZPUuTVF2RGDzHwDL1Vm6xeV4rjLYxggfDEBbdsvY/edit", "benchmarkSheetUrl": "https://docs.google.com/spreadsheets/d/19YgCnDS65pYJxwlnQNr0BH0K9f0yI_g0Fc47ksd3yi8/edit"}</script>
+<script>
+(function(){
+  const DATA = JSON.parse(document.getElementById('data').textContent);
+  const TOTAL = DATA.length;
+  const SHEET_ORDER = ['Food & Drink','Sports and Betting','Finance','Wellness, Lifestyle and Beauty','Entertainment','Other'];
+  // Sheets ordered by recency: newest brief first, ties broken by the next most recent brief, and so on
+  const sheetDates = s => DATA.filter(r => r.category === s).map(r => r.date || '0000-00').sort().reverse();
+  const SHEETS = SHEET_ORDER.filter(s => DATA.some(r => r.category === s)).sort((a, b) => {
+    const da = sheetDates(a), db = sheetDates(b);
+    for (let i = 0; i < Math.max(da.length, db.length); i++) {
+      const x = da[i] || '', y = db[i] || '';
+      if (x !== y) return y.localeCompare(x);
+    }
+    return 0;
+  });
+  const PER_SHEET = 6, CHIPS_VISIBLE = 14, COLLAPSE_AT = 3;
+  const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  const fmtDate = d => { if(!d) return 'Undated'; const [y,m] = d.split('-'); return MONTHS[+m-1] + ' ' + y; };
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const brandsOf = r => r.brands.length ? r.brands : ['Not specified'];
+  const attachLabel = (url, i, n) => {
+    const kind = url.includes('/presentation/') ? 'deck' : url.includes('/document/') ? 'doc' : url.includes('/spreadsheets/') ? 'sheet' : url.includes('/drive/search') ? null : 'file';
+    const base = kind ? `Open the source ${kind}` : 'Search Drive for the source';
+    return n > 1 ? `${base} (${i + 1} of ${n})` : base;
+  };
+  const arrow = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg>';
+
+  const els = {};
+  ['statRow','themeSubhint','sheetSections','searchInput','sheetSelect','brandSelect','sortSelect','viewGrid','viewList',
+   'chipNote','themeChipRow','clearBtn','resultsLine','cardGrid'].forEach(id => els[id] = document.getElementById(id));
+
+  const state = { query:'', sheet:'all', brand:'all', theme:null, sort:'newest', view:'grid', showAllThemes:false, expanded:new Set() };
+
+  function countThemes(rows){
+    const c = {};
+    rows.forEach(r => r.themes.forEach(t => c[t] = (c[t]||0) + 1));
+    return Object.entries(c).sort((a,b) => b[1]-a[1] || a[0].localeCompare(b[0]));
+  }
+
+  function renderStats(){
+    const clients = new Set(DATA.map(r => r.title.toLowerCase()));
+    const dated = DATA.map(r => r.date).filter(Boolean).sort();
+    const stats = [
+      [TOTAL, 'briefs'],
+      [clients.size, 'clients'],
+      [fmtDate(dated[0]) + ' to ' + fmtDate(dated[dated.length-1]), 'coverage window']
+    ];
+    els.statRow.innerHTML = stats.map(([n,l]) => `<div class="stat-card"><div class="num">${esc(n)}</div><div class="lbl">${esc(l)}</div></div>`).join('');
+    els.themeSubhint.textContent = `The ${PER_SHEET} most-used column G keywords in each sheet. Each bar is that keyword's share of the briefs in its own sheet, so a full bar would mean every brief on that sheet carries it. Sheets are ordered by their most recent brief.`;
+  }
+
+  function renderSections(){
+    els.sheetSections.innerHTML = SHEETS.map(sheet => {
+      const rows = DATA.filter(r => r.category === sheet);
+      const n = rows.length;
+      const top = countThemes(rows).slice(0, PER_SHEET);
+      const bars = top.map(([t,c]) => {
+        const pct = c / n * 100;
+        const active = state.sheet === sheet && state.theme === t;
+        return `<button class="theme-bar-row ${active ? 'active' : ''}" data-sheet="${esc(sheet)}" data-theme="${esc(t)}" type="button" title="${c} of ${n} briefs in ${esc(sheet)} (${pct.toFixed(0)}%)">
+          <span class="theme-bar-label">${esc(t)}</span>
+          <span class="theme-bar-track" role="progressbar" aria-valuenow="${c}" aria-valuemin="0" aria-valuemax="${n}"><span class="theme-bar-fill" style="width:${pct.toFixed(1)}%"></span></span>
+          <span class="theme-bar-count">${c}/${n}</span>
+        </button>`;
+      }).join('');
+      return `<div class="sheet-section ${state.sheet === sheet ? 'active' : ''}">
+        <button class="sheet-head" type="button" data-sheet-head="${esc(sheet)}"><span class="sheet-name">${esc(sheet)}</span><span class="sheet-count">${n} ${n === 1 ? 'brief' : 'briefs'}, latest ${esc(fmtDate(sheetDates(sheet).find(d => d !== '0000-00')))}</span></button>
+        <div class="scale-axis"><span></span><span class="ticks"><span>0%</span><span>50%</span><span>100%</span></span><span></span></div>
+        <div class="theme-bars">${bars}</div>
+      </div>`;
+    }).join('');
+    els.sheetSections.querySelectorAll('[data-sheet-head]').forEach(b => b.addEventListener('click', () => {
+      const s = b.getAttribute('data-sheet-head');
+      state.sheet = state.sheet === s ? 'all' : s; state.theme = null; renderAll();
+    }));
+    els.sheetSections.querySelectorAll('.theme-bar-row').forEach(b => b.addEventListener('click', () => {
+      const s = b.getAttribute('data-sheet'), t = b.getAttribute('data-theme');
+      if (state.sheet === s && state.theme === t) { state.theme = null; } else { state.sheet = s; state.theme = t; }
+      renderAll();
+    }));
+  }
+
+  function renderSelects(){
+    els.sheetSelect.innerHTML = `<option value="all">All sheets</option>` +
+      SHEETS.map(s => `<option value="${esc(s)}">${esc(s)} (${DATA.filter(r => r.category === s).length})</option>`).join('');
+    els.sheetSelect.value = state.sheet;
+    const bc = {}; DATA.forEach(r => brandsOf(r).forEach(b => bc[b] = (bc[b]||0) + 1));
+    els.brandSelect.innerHTML = `<option value="all">All Jungle brands</option>` +
+      Object.keys(bc).sort((a,b) => bc[b]-bc[a] || a.localeCompare(b)).map(b => `<option value="${esc(b)}">${esc(b)} (${bc[b]})</option>`).join('');
+    els.brandSelect.value = state.brand;
+  }
+
+  function renderChips(){
+    const scope = state.sheet === 'all' ? DATA : DATA.filter(r => r.category === state.sheet);
+    const list = countThemes(scope);
+    els.chipNote.innerHTML = `Column G keywords ${state.sheet === 'all' ? 'across all sheets' : `in <strong>${esc(state.sheet)}</strong>`}`;
+    const shown = state.showAllThemes ? list : list.slice(0, CHIPS_VISIBLE);
+    let html = shown.map(([t,c]) => `<button class="chip ${state.theme === t ? 'active' : ''}" data-theme="${esc(t)}" type="button">${esc(t)} &middot; ${c}</button>`).join('');
+    if (list.length > CHIPS_VISIBLE) html += `<button class="chip more-toggle" id="moreThemesBtn" type="button">${state.showAllThemes ? 'Show fewer keywords' : `+${list.length - CHIPS_VISIBLE} more keywords`}</button>`;
+    els.themeChipRow.innerHTML = html;
+    els.themeChipRow.querySelectorAll('.chip[data-theme]').forEach(b => b.addEventListener('click', () => {
+      const t = b.getAttribute('data-theme'); state.theme = state.theme === t ? null : t; renderAll();
+    }));
+    const more = document.getElementById('moreThemesBtn');
+    if (more) more.addEventListener('click', () => { state.showAllThemes = !state.showAllThemes; renderChips(); });
+  }
+
+  function getFiltered(){
+    const q = state.query.trim().toLowerCase();
+    const rows = DATA.filter(r => {
+      if (state.sheet !== 'all' && r.category !== state.sheet) return false;
+      if (state.brand !== 'all' && !brandsOf(r).includes(state.brand)) return false;
+      if (state.theme && !r.themes.includes(state.theme)) return false;
+      if (q && ![r.title, r.campaign, r.audience, r.lookingAt, r.useThis, r.category, ...r.findings, ...r.themes, ...r.brands].join(' ').toLowerCase().includes(q)) return false;
+      return true;
+    });
+    const key = r => r.date || '';
+    return rows.sort((a,b) => {
+      if (state.sort === 'newest') return (!a.date) - (!b.date) || key(b).localeCompare(key(a)) || a.title.localeCompare(b.title);
+      if (state.sort === 'oldest') return (!a.date) - (!b.date) || key(a).localeCompare(key(b)) || a.title.localeCompare(b.title);
+      if (state.sort === 'az') return a.title.localeCompare(b.title) || key(b).localeCompare(key(a));
+      return brandsOf(a)[0].localeCompare(brandsOf(b)[0]) || a.title.localeCompare(b.title);
+    });
+  }
+
+  function renderCards(){
+    const rows = getFiltered();
+    const bits = [];
+    if (state.sheet !== 'all') bits.push(`in <strong>${esc(state.sheet)}</strong>`);
+    if (state.theme) bits.push(`tagged <strong>${esc(state.theme)}</strong>`);
+    if (state.brand !== 'all') bits.push(`on <strong>${esc(state.brand)}</strong>`);
+    els.resultsLine.innerHTML = `Showing <strong>${rows.length}</strong> of <strong>${TOTAL}</strong> briefs ${bits.join(' ')}`;
+    els.cardGrid.classList.toggle('list-view', state.view === 'list');
+    if (!rows.length) {
+      els.cardGrid.innerHTML = `<div class="empty-state"><div class="big">&#128269;</div>No briefs match those filters.<br>Try clearing a filter or a different search term.</div>`;
+      return;
+    }
+    els.cardGrid.innerHTML = rows.map(r => {
+      const open = state.expanded.has(r.id);
+      const toggle = r.findings.length > COLLAPSE_AT;
+      const bullets = r.findings.map((f,i) => `<li class="${!open && toggle && i >= COLLAPSE_AT ? 'hidden-finding' : ''}">${esc(f)}</li>`).join('');
+      const att = r.attachments;
+      return `<article class="card">
+        <div class="card-tags"><span class="tag sheet-tag">${esc(r.category)}</span>${r.themes.length ? r.themes.map(t => `<span class="tag">${esc(t)}</span>`).join('') : '<span class="no-tags">No keywords in column G</span>'}</div>
+        <div class="card-meta"><span class="card-pub">${esc(brandsOf(r).join(', '))}</span><span class="card-date">${esc(fmtDate(r.date))}</span></div>
+        <h3>${att.length ? `<a href="${esc(att[0])}" target="_blank" rel="noopener">${esc(r.title)}: ${esc(r.campaign)} ${arrow}</a>` : `${esc(r.title)}: ${esc(r.campaign)}`}</h3>
+        <p class="card-looking">${esc(r.lookingAt)}</p>
+        <p class="card-audience"><b>Audience:</b> ${esc(r.audience)}</p>
+        <ul class="card-findings">${bullets}</ul>
+        ${toggle ? `<button class="more-findings" data-id="${esc(r.id)}" type="button">${open ? 'Show fewer findings' : `Show all ${r.findings.length} findings`}</button>` : ''}
+        <div class="card-use-case">
+          <span class="use-case-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg>How we could use this</span>
+          <p>${esc(r.useThis)}</p>
+        </div>
+        ${r.flag ? `<p class="card-flag">Data note: ${esc(r.flag)}</p>` : ''}
+        <div class="card-footer">${att.length ? att.map((u,i) => `<a class="report-link" href="${esc(u)}" target="_blank" rel="noopener">${attachLabel(u, i, att.length)} ${arrow}</a>`).join('') : '<span class="no-attach">No attachment in column A of the directory</span>'}</div>
+      </article>`;
+    }).join('');
+    els.cardGrid.querySelectorAll('.more-findings').forEach(b => b.addEventListener('click', () => {
+      const id = b.getAttribute('data-id'); state.expanded.has(id) ? state.expanded.delete(id) : state.expanded.add(id); renderCards();
+    }));
+  }
+
+  function updateClear(){
+    const active = state.query || state.sheet !== 'all' || state.brand !== 'all' || state.theme || state.sort !== 'newest';
+    els.clearBtn.classList.toggle('show', !!active);
+  }
+  function renderAll(){ renderSections(); renderSelects(); renderChips(); renderCards(); updateClear(); }
+
+  els.searchInput.addEventListener('input', e => { state.query = e.target.value; renderCards(); updateClear(); });
+  els.sheetSelect.addEventListener('change', e => { state.sheet = e.target.value; state.theme = null; renderAll(); });
+  els.brandSelect.addEventListener('change', e => { state.brand = e.target.value; renderCards(); updateClear(); });
+  els.sortSelect.addEventListener('change', e => { state.sort = e.target.value; renderCards(); updateClear(); });
+  els.viewGrid.addEventListener('click', () => { state.view = 'grid'; els.viewGrid.classList.add('active'); els.viewList.classList.remove('active'); renderCards(); });
+  els.viewList.addEventListener('click', () => { state.view = 'list'; els.viewList.classList.add('active'); els.viewGrid.classList.remove('active'); renderCards(); });
+  els.clearBtn.addEventListener('click', () => {
+    Object.assign(state, { query:'', sheet:'all', brand:'all', theme:null, sort:'newest' });
+    els.searchInput.value = ''; els.sortSelect.value = 'newest'; renderAll();
+  });
+
+  renderStats(); renderAll();
+})();
+</script>
+
+<script>
+(function(){
+  const P = JSON.parse(document.getElementById('blsdata').textContent);
+  const S = P.studies, BENCH = P.benchmark, OBENCH = P.overallBenchmark || {};
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const fmt = v => (v > 0 ? '+' : '') + (Math.round(v * 10) / 10) + '%';
+  const arrow = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg>';
+  S.forEach((b, i) => {
+    b.id = 'bls' + i;
+    const e = Object.entries(b.results).sort((x, y) => y[1] - x[1]);
+    b.best = e.length ? { kpi: e[0][0], v: e[0][1] } : null;
+  });
+  const WITH = S.filter(b => b.best);
+  const kpiCount = {}; WITH.forEach(b => Object.keys(b.results).forEach(k => kpiCount[k] = (kpiCount[k] || 0) + 1));
+  const KPIS = Object.keys(kpiCount).sort((a, b) => kpiCount[b] - kpiCount[a] || a.localeCompare(b));
+  const driverCount = {}; WITH.forEach(b => driverCount[b.best.kpi] = (driverCount[b.best.kpi] || 0) + 1);
+  const PROVIDERS = [...new Set(S.map(b => b.providerGroup))].sort();
+  const YEARS = [...new Set(S.map(b => b.year))].sort((a, b) => b - a);
+  const st = { kpi: null, driver: 'all', provider: 'all', year: 'all', sort: 'uplift' };
+  const $ = id => document.getElementById(id);
+
+  // intro and stats, all computed from the tracker data
+  const tt = WITH.filter(b => b.providerGroup === 'ThisThat' && b.results['Ad Awareness'] !== undefined);
+  const beat = tt.filter(b => b.results['Ad Awareness'] > BENCH['Ad Awareness']).length;
+  $('blsIntro').innerHTML = `Every brand lift study from ${YEARS[YEARS.length-1]} onwards in the <a href="${esc(P.trackerUrl)}" target="_blank" rel="noopener">Brand lift studies tracker</a>, with each card linking to the study deck from column A. Studies were run by different providers (${PROVIDERS.join(', ')}) that measure lift in different ways, so compare numbers within a provider rather than across them. Where a KPI has one, results are also checked against the industry-wide average lift in the <a href="${esc(P.benchmarkSheetUrl)}" target="_blank" rel="noopener">Brand Lift Study Benchmarks</a> sheet.`;
+  const statsArr = [
+    [S.length, 'studies'],
+    [WITH.length + '/' + S.length, 'with results'],
+    [KPIS.length, 'KPIs measured'],
+    [beat + '/' + tt.length, 'beat ThisThat awareness benchmark']
+  ];
+  $('blsStats').innerHTML = statsArr.map(([n, l]) => `<div class="stat-card"><div class="num">${esc(n)}</div><div class="lbl">${esc(l)}</div></div>`).join('');
+
+  $('blsDriver').innerHTML = `<option value="all">Biggest uplift in: any KPI</option>` + Object.keys(driverCount).sort((a, b) => driverCount[b] - driverCount[a] || a.localeCompare(b)).map(k => `<option value="${esc(k)}">Biggest uplift in: ${esc(k)} (${driverCount[k]})</option>`).join('');
+  $('blsProvider').innerHTML = `<option value="all">All providers</option>` + PROVIDERS.map(p => `<option value="${esc(p)}">${esc(p)} (${S.filter(b => b.providerGroup === p).length})</option>`).join('');
+  $('blsYear').innerHTML = `<option value="all">All years</option>` + YEARS.map(y => `<option value="${y}">${y}</option>`).join('');
+
+  function filtered(){
+    return S.filter(b => {
+      if (st.kpi && b.results[st.kpi] === undefined) return false;
+      if (st.driver !== 'all' && (!b.best || b.best.kpi !== st.driver)) return false;
+      if (st.provider !== 'all' && b.providerGroup !== st.provider) return false;
+      if (st.year !== 'all' && String(b.year) !== st.year) return false;
+      return true;
+    });
+  }
+  const valOf = b => st.kpi ? b.results[st.kpi] : (b.best ? b.best.v : -Infinity);
+
+  function renderChips(){
+    $('kpiChips').innerHTML = `<button class="chip ${st.kpi ? '' : 'active'}" data-kpi="" type="button">All KPIs: each study's biggest uplift</button>` +
+      KPIS.map(k => `<button class="chip ${st.kpi === k ? 'active' : ''}" data-kpi="${esc(k)}" type="button">${esc(k)} &middot; ${kpiCount[k]}</button>`).join('');
+    $('kpiChips').querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => { st.kpi = c.dataset.kpi || null; render(); }));
+  }
+
+  function renderLeaderboard(rows){
+    const list = rows.filter(b => b.best).slice().sort((a, b) => valOf(b) - valOf(a));
+    $('leadTitle').textContent = st.kpi ? `Biggest uplifts in ${st.kpi}` : 'Biggest uplift from each study';
+    if (!list.length) { $('leaderboard').innerHTML = '<p class="subhint">No studies match those filters.</p>'; $('leadLegend').innerHTML = ''; return; }
+    const bench = st.kpi ? BENCH[st.kpi] : undefined;
+    const obench = st.kpi ? OBENCH[st.kpi] : undefined;
+    const max = Math.max(...list.map(b => Math.abs(valOf(b))), bench || 0, obench || 0) || 1;
+    $('leaderboard').innerHTML = list.map(b => {
+      const v = valOf(b), w = Math.abs(v) / max * 100;
+      const label = st.kpi ? '' : ` <small>${esc(b.best.kpi)}</small>`;
+      return `<div class="lead-row">
+        <a href="${esc(b.link)}" target="_blank" rel="noopener" title="Open the ${esc(b.brand)} BLS deck">${esc(b.brand)} ${b.year}${label}</a>
+        <span class="lead-track"><span class="lead-fill ${v < 0 ? 'neg' : ''}" style="width:${w.toFixed(1)}%"></span>${bench !== undefined ? `<span class="bench-mark" style="left:${(bench / max * 100).toFixed(1)}%"></span>` : ''}${obench !== undefined ? `<span class="bench-mark overall" style="left:${(obench / max * 100).toFixed(1)}%"></span>` : ''}</span>
+        <span class="lead-val ${v < 0 ? 'neg' : ''}">${fmt(v)}</span>
+      </div>`;
+    }).join('');
+    const legendBits = [`<span>Bar length is relative to the biggest ${st.kpi ? esc(st.kpi) + ' ' : ''}uplift shown (${fmt(max)}). Red bars are drops.</span>`];
+    if (bench !== undefined) legendBits.push(`<span><span class="key"></span>ThisThat benchmark ${fmt(bench)}</span>`);
+    if (obench !== undefined) legendBits.push(`<span><span class="key" style="background:#f0c46a"></span>Industry average lift ${fmt(obench)}</span>`);
+    $('leadLegend').innerHTML = legendBits.join('');
+  }
+
+  function card(b){
+    const entries = Object.entries(b.results).sort((x, y) => y[1] - x[1]);
+    return `<article class="card">
+      <div class="card-tags"><span class="tag sheet-tag">${esc(b.providerGroup)}</span><span class="tag">${b.year}</span>${b.best ? `<span class="tag">Biggest: ${esc(b.best.kpi)}</span>` : ''}</div>
+      <div class="card-meta"><span class="card-pub">${esc(b.partner)}</span><span class="card-date">${b.year}</span></div>
+      <h3><a href="${esc(b.link)}" target="_blank" rel="noopener">${esc(b.brand)} ${arrow}</a></h3>
+      ${b.best ? `<div class="card-use-case"><span class="use-case-label"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z"/></svg>Biggest uplift</span><p>${esc(b.best.kpi)} ${fmt(b.best.v)}${BENCH[b.best.kpi] !== undefined && b.providerGroup === 'ThisThat' ? `, against a ThisThat benchmark of ${fmt(BENCH[b.best.kpi])}` : ''}</p></div>` : ''}
+      ${entries.length ? `<ul class="kpi-list">${entries.map(([k, v]) => {
+        const ob = OBENCH[k];
+        const cmp = ob === undefined ? '' : `<span class="cmp ${v >= ob ? 'above' : 'below'}" title="Industry average lift for ${esc(k)} is ${fmt(ob)}">${v >= ob ? '&#9650;' : '&#9660;'} vs ${fmt(ob)} avg</span>`;
+        return `<li class="${v < 0 ? 'neg' : ''} ${st.kpi === k ? 'sel' : ''}"><span>${esc(k)}</span><span>${cmp}<b>${fmt(v)}</b></span></li>`;
+      }).join('')}</ul>` : '<p class="card-looking">No results recorded in the tracker yet.</p>'}
+      ${b.rtb ? `<p class="card-rtb"><b>Related RTB brief:</b> ${esc(b.rtb)}</p>` : ''}
+      ${b.flag ? `<p class="card-flag">Data note: ${esc(b.flag)}</p>` : ''}
+      ${b.notes.map(n => `<p class="card-flag">Data note: ${esc(n)}</p>`).join('')}
+      <div class="card-footer"><a class="report-link" href="${esc(b.link)}" target="_blank" rel="noopener">Open the BLS deck ${arrow}</a></div>
+    </article>`;
+  }
+
+  function render(){
+    renderChips();
+    const rows = filtered();
+    renderLeaderboard(rows);
+    const sorted = rows.slice().sort((a, b) => {
+      if (st.sort === 'newest') return b.year - a.year || a.row - b.row;
+      if (st.sort === 'az') return a.brand.localeCompare(b.brand) || b.year - a.year;
+      return valOf(b) - valOf(a) || b.year - a.year;
+    });
+    const bits = [];
+    if (st.kpi) bits.push(`measuring <strong>${esc(st.kpi)}</strong>`);
+    if (st.driver !== 'all') bits.push(`whose biggest uplift was <strong>${esc(st.driver)}</strong>`);
+    if (st.provider !== 'all') bits.push(`from <strong>${esc(st.provider)}</strong>`);
+    if (st.year !== 'all') bits.push(`in <strong>${esc(st.year)}</strong>`);
+    $('blsResults').innerHTML = `Showing <strong>${rows.length}</strong> of <strong>${S.length}</strong> studies ${bits.join(' ')}`;
+    $('blsGrid').innerHTML = sorted.length ? sorted.map(card).join('') : `<div class="empty-state"><div class="big">&#128269;</div>No studies match those filters.<br>Try clearing a filter.</div>`;
+    const active = st.kpi || st.driver !== 'all' || st.provider !== 'all' || st.year !== 'all' || st.sort !== 'uplift';
+    $('blsClear').classList.toggle('show', !!active);
+  }
+  $('blsDriver').addEventListener('change', e => { st.driver = e.target.value; render(); });
+  $('blsProvider').addEventListener('change', e => { st.provider = e.target.value; render(); });
+  $('blsYear').addEventListener('change', e => { st.year = e.target.value; render(); });
+  $('blsSort').addEventListener('change', e => { st.sort = e.target.value; render(); });
+  $('blsClear').addEventListener('click', () => {
+    Object.assign(st, { kpi: null, driver: 'all', provider: 'all', year: 'all', sort: 'uplift' });
+    ['blsDriver', 'blsProvider', 'blsYear'].forEach(id => $(id).value = 'all'); $('blsSort').value = 'uplift'; render();
+  });
+  render();
+})();
+</script>
+</body></html>

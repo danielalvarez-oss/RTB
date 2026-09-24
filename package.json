@@ -1,0 +1,12 @@
+{
+  "name": "rtb-directory-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Response to Brief Directory dashboard, Jungle Creations",
+  "scripts": {
+    "start": "serve -s . -l ${PORT:-3000}"
+  },
+  "dependencies": {
+    "serve": "^14.2.3"
+  }
+}
