@@ -74,11 +74,9 @@ Railway service variables:
 If `DATABASE_URL` or `SESSION_SECRET` is missing, the server stays locked rather
 than serving the dashboard.
 
-To create an invite from the command line (e.g. a new first admin):
-
-```bash
-railway ssh --service rtb-directory-dashboard -- node invite.js name@junglecreations.com --admin
-```
+First admin: set `ADMIN_EMAIL` and a random `SETUP_TOKEN`. While no admin exists,
+`<BASE_URL>/invite/<SETUP_TOKEN>` works as a one-time admin invite for that email.
+Remove both variables once the admin is set up.
 
 A Google sign-in version is kept on the `google-sign-in` branch for when a Google
 Cloud project is available.

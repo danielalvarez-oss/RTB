@@ -233,7 +233,7 @@ app.get(
         (u) => `<tr><td>${esc(u.name)}${u.is_admin ? ' <span class="tag">Admin</span>' : ""}<div class="muted">${esc(u.email)}</div></td>
           <td class="muted">${fmt(u.last_login_at)}</td>
           <td class="actions">${post(`/admin/users/${u.id}/reset`, "Reset link", `Create a password reset link for ${u.email}? Their current password keeps working until they use it.`)}
-          ${u.id === req.user.id ? "" : post(`/admin/users/${u.id}/remove`, "Remove", `Remove ${u.email}? They'll be signed out straight away.`, "link danger")}</td></tr>`
+          ${post(`/admin/users/${u.id}/remove`, "Remove", u.id === req.user.id ? "Remove your own access? You'll be signed out." : `Remove ${u.email}? They'll be signed out straight away.`, "link danger")}</td></tr>`
       )
       .join("");
     const inviteRows = invites
@@ -298,7 +298,10 @@ app.post(
   checkCsrf,
   wrap(async (req, res) => {
     const id = Number(req.params.id);
-    if (id !== req.user.id) {
+    const { rows: admins } = await db.pool.query("select id from users where is_admin");
+    if (admins.length === 1 && admins[0].id === id) {
+      req.session.flash = { error: "You can't remove the only admin. Make someone else an admin first." };
+    } else {
       const { rows } = await db.pool.query("delete from users where id = $1 returning email", [id]);
       if (rows[0]) {
         await db.pool.query("delete from invites where email = $1 and used_at is null", [rows[0].email]);
@@ -328,7 +331,18 @@ app.use((err, req, res, next) => {
   res.status(500).send(page("Something went wrong", `<p>Please try again in a moment. <a href="/">Back to the dashboard</a></p>`));
 });
 
+// First-run setup: while there's no admin yet, SETUP_TOKEN works as an admin invite link for ADMIN_EMAIL.
+async function bootstrapAdmin() {
+  const { ADMIN_EMAIL, SETUP_TOKEN } = process.env;
+  if (!ADMIN_EMAIL || !SETUP_TOKEN) return;
+  const { rows } = await db.pool.query("select 1 from users where is_admin limit 1");
+  if (rows.length) return;
+  await db.createInvite(ADMIN_EMAIL, { isAdmin: true, createdBy: "setup", token: SETUP_TOKEN });
+  console.log(`Setup invite ready for ${ADMIN_EMAIL}`);
+}
+
 db.migrate()
+  .then(bootstrapAdmin)
   .then(() => app.listen(PORT, () => console.log(`Listening on ${PORT}, invite-only for @${ALLOWED_DOMAIN}`)))
   .catch((err) => {
     console.error("Database setup failed:", err);

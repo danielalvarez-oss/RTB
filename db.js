@@ -49,11 +49,11 @@ async function checkPassword(password, stored) {
 }
 
 // Returns the raw token; only its hash is stored, so a link can't be recovered from the database.
-async function createInvite(email, { isAdmin = false, createdBy = null } = {}) {
-  const token = crypto.randomBytes(32).toString("base64url");
+async function createInvite(email, { isAdmin = false, createdBy = null, token = crypto.randomBytes(32).toString("base64url") } = {}) {
   await pool.query(
     `insert into invites (token_hash, email, is_admin, created_by, expires_at)
-     values ($1, $2, $3, $4, now() + ($5 || ' days')::interval)`,
+     values ($1, $2, $3, $4, now() + ($5 || ' days')::interval)
+     on conflict (token_hash) do nothing`,
     [sha256(token), email.toLowerCase(), isAdmin, createdBy, String(INVITE_DAYS)]
   );
   return token;
